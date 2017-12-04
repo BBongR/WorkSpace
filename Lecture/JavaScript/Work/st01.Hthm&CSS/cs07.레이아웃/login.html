@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>기본 정보 입력</title>
+    <style type="text/css">
+    .top  { width: 356px; }
+    .name1 { float: left; }
+    .name2 { float: left; margin-left: 9px }
+    .rrn  { clear: both; }
+    .pwdhint{ margin-top: 2px; }
+    .birth{ margin-top: 2px; text-align: center; border: 1px solid #A9A9A9; width: 350px; padding: 2px; border-radius: 5px; }
+    .phone{ margin-top: 2px; text-align: center; border: 1px solid #A9A9A9; width: 350px; padding: 2px; border-radius: 5px; }
+    #phone1{ margin-right: 5px; margin-left: 5px; margin-top: 2px; text-align: center;}
+    #phone2{ margin-top: 2px; text-align: center;}
+    .check{ margin-top: 2px; text-align: center;}
+    input { border-radius: 5px; }
+    select { border-radius: 5px; }
+    button { border-radius: 10px; }
+</style>
+</head>
+<body>
+    <div class="top" style="text-align: center;">
+        <h4>기본 정보 입력</h4>
+        <div class="row">
+            <div class="name1"><input type="text" name="firstname" placeholder="성"></div>
+            <div class="name2"><input type="text" name="lastname" placeholder="이름"></div>
+            <div class="rrn"><input type="text" name="rrn" placeholder="주민번호" size="46"></div>
+            <div class="id">
+                <input type="text" name="id" placeholder="아이디" size="38">
+                <button type="submit">check</button>
+            </div>
+            <div class="nickname"><input type="text" name="nick" placeholder="닉네임" size="46"></div>
+            <div class="pwd1"><input type="text" name="pwd1" placeholder="비밀번호" size="46"></div>
+            <div class="pwd2"><input type="text" name="pwd2" placeholder="비밀번호확인" size="46"></div>
+            <div class="pwdhint">
+                <select style="width: 355px; height: 22px">
+                    <option>다시 태어나면 되고 싶은 것은?</option>
+                    <option>다시 태어나면 되고 싶은 것은?</option>
+                    <option>다시 태어나면 되고 싶은 것은?</option>
+                </select>
+            </div>
+            <div class="answer"><input type="text" name="answer" placeholder="답을 입력하세요." size="46">
+            </div>
+            <div class="email"><input type="text" name="Email" placeholder="이메일" size="46"></div>
+            <div class="birth">
+                <input type="text" name="birth" placeholder="1999" size="1" style="height: 16px;">
+                <select style="width: 50px; height: 22px">
+                    <option>01</option><option>02</option><option>03</option><option>04</option>
+                    <option>05</option><option>06</option><option>07</option><option>08</option>
+                    <option>09</option><option>10</option><option>11</option><option>12</option>
+                </select>
+                <select style="width: 50px; height: 22px">
+                    <option>01</option><option>02</option><option>03</option><option>04</option>
+                    <option>05</option><option>06</option><option>07</option><option>08</option>
+                    <option>09</option><option>10</option><option>11</option><option>12</option>
+                    <option>13</option><option>14</option><option>15</option><option>16</option>
+                    <option>17</option><option>18</option><option>19</option><option>20</option>
+                    <option>21</option><option>22</option><option>23</option><option>24</option>
+                    <option>25</option><option>26</option><option>27</option><option>28</option>
+                    <option>29</option><option>30</option><option>31</option>
+                </select>
+                <input type="radio">양력</input>
+                <input type="radio">음력</input>
+            </div>
+            <div class="phone">
+                <select style="width: 50px; height: 22px"><option>010</option>
+                    <input id="phone1" type="text" name="phone1" placeholder="" size="3" style="height: 16px;">-
+                    <input id="phone2" type="text" name="phone2" placeholder="" size="3" style="height: 16px;">
+                    <input type="radio">SKT</input>
+                    <input type="radio">KTF</input>
+                    <input type="radio">LGT</input>
+                </div>
+                <div class="check"><button type="submit">확인</button></div>
+            </div>
+        </div>
+    </body>
+    </html>

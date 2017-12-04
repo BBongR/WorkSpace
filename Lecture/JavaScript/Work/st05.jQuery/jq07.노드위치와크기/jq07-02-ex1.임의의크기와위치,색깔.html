@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>엘리먼트의 너비 값 변경하기</title>
+    <style>
+        div{ position:relative; width: 70px; height: 50px; float:left;
+             background-color: red; cursor: pointer;
+             margin: 5px;
+        }
+    </style>
+
+    <script src="../jquery-3.1.1.js"><!-- jquery 임포트 --> </script>
+    <script>
+        var MYAPP = {  };
+
+        $(document).ready(function () {
+
+            $('div').click(	function(event){
+
+                // 난수 만들기
+                var x = Math.random() * 600;
+                var y = Math.random() * 400;
+                var w = $(this).width() * Math.random() * 2;
+                var h = $(this).height() * Math.random() * 3;
+
+                var c = Math.floor( Math.random()*0xffffff );
+
+                // width,height 설정
+                $(this).css( { 'width': w, 'height': h, 'background-color': '#'+c.toString(16) } );
+
+                // left, top 설정.
+                // position:relative 로 설정해야함.
+                $(this).offset( { 'left': x, 'top': y} );
+            });
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

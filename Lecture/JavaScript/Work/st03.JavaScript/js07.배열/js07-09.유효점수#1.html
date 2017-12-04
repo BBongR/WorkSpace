@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var su = 5;
+		var sum = 0;
+		var arr = [];
+		var avg = 0;
+		for(var i=0; i<su; i++){
+			arr[i] = prompt((i+1)+"점수 입력:",'0');
+		}
+
+		for(var i=0; i<arr.length; i++){
+			arr[i] = Number(arr[i]);
+		}
+		
+		var compNumber = function(a,b) {
+			return a-b;
+		}
+		arr.sort(compNumber);
+
+		console.log(arr);
+
+		arr.splice(0,1);
+		arr.splice(arr.length-1,1);
+
+		for(var i=0; i<arr.length; i++){
+			sum = sum + arr[i];
+		}
+		avg = sum/arr.length;
+
+		console.log(arr);
+		console.log('합계:'+sum);
+		console.log('평균:'+avg.toFixed(2));
+	</script>
+}
+</head>
+<body>
+
+</body>
+</html>

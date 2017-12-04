@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        button { cursor: pointer;}
+        p { cursor: pointer; width: 500px; }
+        p:hover { background: #c1ceff; }
+        div     { width: 500px; background: yellow; padding-bottom: 5px; }
+        hr      { width: 500px; float: left; }
+        ul      { width: 300px; }
+        .yellow { background: yellow; }
+        .red    { background: red;    }
+        .white  { background: white;  }
+        .gray   { background: gray;   }
+    </style>
+    <script src='../jquery-3.1.1.js'></script>
+    <script>
+        $(document).ready( function() {
+
+            // value attribute CRUD
+            $('#value_read'  ).click( function(event) {
+                var val = $('#text').val();
+                window.alert( val );
+            });
+            $('#value_create').click( function(event) {
+                var val = $('#text').val();
+                var str = val + '> 추가';
+                $('#text').val( str );
+            });
+            $('#value_update').click( function(event) {
+                var val = $('#value_update').text();
+                $('#text').val( val );
+            });
+            $('#value_delete').click( function(event) {
+                $('#text').val( '' );
+            });
+
+
+            // text node CRUD
+            $('#prop_read').click( function(evenet){
+                var result = $('input[name="aaa"]').prop('checked');
+                alert( result );
+            });
+            $("#prop_create" ).click( function(e) {
+                $('input[name="bbb"]').attr('checked', true);
+            });
+            $("#prop_update" ).click( function(e) {
+
+                if( $('input[name="aaa"]').is(":checked") === true) {
+                    $('input[name="aaa"]').attr('checked', false);
+                }
+                else {
+                    $('input[name="aaa"]').attr('checked', true);
+                }
+
+            });
+            $("#prop_delete" ).click( function(e) {
+                $('input[name="ccc"]').removeAttr('disabled');
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h2>&lt;img src="" style="" class="" data-sw="" /&gt;</h2>
+
+    <hr>
+
+    <div>
+        <h3>value attribute CRUD</h3>
+        <input id="text" type="text" value="값 없음" size="50" placeholder='값을 입력하세요'>
+        <br>
+        <button id="value_read"  >value 읽기(R)</button>
+        <button id="value_create">value 추가(C)</button>
+        <button id="value_update">value 수정(U)</button>
+        <button id="value_delete">value 삭제(D)</button>
+        <div id="result_value">  </div>
+    </div>
+    <hr>
+
+    <div>
+        <h3>프로퍼티 CRUD</h3>
+        <input type='checkbox' name='aaa' checked />
+        <input type='radio'    name='bbb' value='aaaa1' />
+        <input type='text'     name='ccc' value='aaaa1' disabled />
+        <br>
+        <button id="prop_read"  >checkbox checked 프러퍼티 읽기(R)</button>
+        <button id="prop_create">radio에 checked 프러퍼티 추가(C)</button>
+        <button id="prop_update">checkbox checked 프러퍼티 수정(U)</button>
+        <button id="prop_delete">disabled 프러퍼티 삭제(D)</button>
+        <div id="result_prop">  </div>
+    </div>
+</body>
+</html>

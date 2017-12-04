@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.mapperAuth">
+
+    <select id="getCount" parameterType="ModelAuth" resultType="int">
+        select count(*) total from auth
+        where 1 = 1
+        <if test=" name != null and name !='' ">and name = #{name}</if>
+        <if test="birth != null and birth != '' ">and birth = #{birth}</if>
+    </select>
+
+    <select id="getMaxAuthid" resultType="int">
+        select max(authid) from
+        auth
+    </select>
+
+    <select id="selectAll" resultType="ModelAuth">
+        select * from auth
+    </select>
+
+    <select id="selectLike" parameterType="ModelAuth" resultType="ModelAuth">
+
+    </select>
+
+    <select id="selectEqual" parameterType="ModelAuth" resultType="ModelAuth">
+    </select>
+
+    <insert id="insertAuth" parameterType="ModelAuth" useGeneratedKeys="true" keyProperty="authid">
+    </insert>
+</mapper>

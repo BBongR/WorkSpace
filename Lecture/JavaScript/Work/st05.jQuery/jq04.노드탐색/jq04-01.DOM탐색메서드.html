@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title> DOM 탐색</title>
+    <style>
+        #container div, .div { margin: 5px; border: 2px red solid;  background: #ccff0e; }
+        span { margin: 10px; border: 2px red solid;  background: #ffb42e; color: blue; }
+        .after { background: pink }
+        .selected {border: 4px blue solid !important; }
+    </style>
+    <script src="../jquery-3.1.1.js"><!-- jquery 임포트 --></script>
+    <script>
+        var MYAPP = {};
+
+        MYAPP.init = function(tags) {
+            var styles = {'visibility' : '',
+                'border' : '',
+                'color' : ''
+            };
+
+            $('*').removeAttr( 'style' );
+            $('#container').find().removeClass();
+        };
+
+        MYAPP.blink = function(tags) {
+            clearInterval(MYAPP.timer);
+
+            $(MYAPP.tags).each(function(){ $(this).css('visibility' , '' ) });
+            MYAPP.tags = tags;
+            MYAPP.timer = setInterval(function(){
+                $(MYAPP.tags).each(function(){
+                    $(this).css('visibility' , $(this).css('visibility') === 'hidden' ? '' : 'hidden')
+                });
+            }, 500);
+        };
+		MYAPP.printTagsName = function( $result ){
+
+                $("#result").text( $result.get().reverse().join(", "));
+        };
+
+        $(document).ready(function () {
+            $('input.parents').click( function(event) {
+
+                MYAPP.init();
+
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result = $center.parents();
+                $result.css("border", "2px dotted black");
+                MYAPP.blink( $center );
+
+				MYAPP.printTagsName( $result );
+            });
+            $('input.parent').click( function(event) {
+
+                MYAPP.init();
+
+                var result = [];
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result = $center.parent();
+                $result.css("border", "2px dotted black");
+                MYAPP.blink( $center );
+
+				MYAPP.printTagsName($result);
+            });
+            $('input.first').click( function(event) {
+
+                MYAPP.init();
+
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result =  $center.parent().children().first();
+                $result.addClass("after");
+                MYAPP.blink( $result );
+
+				MYAPP.printTagsName( $result );
+            });
+            $('input.next').click( function(event) {
+
+                MYAPP.init();
+
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result = $center.next();
+                $result.addClass("after");
+                MYAPP.blink( $result );
+
+				MYAPP.printTagsName( $result );
+            });
+            $('input.nextAll').click( function(event) {
+
+                MYAPP.init();
+
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result = $center.nextAll();
+                $result.addClass("after");
+                MYAPP.blink( $result );
+
+				MYAPP.printTagsName( $result );
+            });
+            $('input.last').click( function(event) {
+
+                MYAPP.init();
+
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result = $center.parent().children().last();
+                $result.addClass("after");
+                MYAPP.blink( $result );
+
+				MYAPP.printTagsName( $result );
+            });
+            $('input.children').click( function(event) {
+
+                MYAPP.init();
+
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result = $center.children();
+                $reslut.addClass("after").css("color", "red");
+                MYAPP.blink( $result );
+
+				MYAPP.printTagsName( $result );
+            });
+            $('input.prev').click( function(event) {
+
+                MYAPP.init();
+
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result = $center.prev();
+                $result.addClass("after");
+                MYAPP.blink( $result );
+
+				MYAPP.printTagsName( $result );
+            });
+            $('input.prevAll').click( function(event) {
+
+                MYAPP.init();
+
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result = $center.prevAll();
+                $result.addClass("after");
+                MYAPP.blink( $result );
+
+				MYAPP.printTagsName( $result );
+            });
+            $('input.siblings').click( function(event) {
+
+                MYAPP.init();
+
+                var $center = $("#center");
+                $center.addClass("selected");
+                var $result = $center.siblings() ;
+                MYAPP.blink( $result );
+
+				MYAPP.printTagsName( $result );
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <p>부모, 형제, 자식 노드</p>
+
+    <div id="container">
+        <div id="header">
+            <div id="first">first</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div id="prev">prev</div>
+            <div id="center">
+                <span id="second" class="middle">
+                    sibling <span id="child">child</span>
+                </span>
+                <span id="third" class="middle">third</span>
+                <span id="fourth" class="middle">fourth</span>
+                <span id="fifth" class="middle">fifth</span>
+                <span id="sixth">sixth</span>
+            </div>
+            <div id="next">next</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div id="last">last</div>
+        </div>
+    </div>
+
+    <hr>
+    <input class="parents"  type="button" value="parents()">
+    <input class="parent"   type="button" value="parent()">
+    &nbsp; / &nbsp;
+    <input class="first"    type="button" value="first()">
+    <input class="prevAll"  type="button" value="prevAll()">
+    <input class="prev"     type="button" value="prev()">
+    &nbsp; / &nbsp;
+    <input class="next"     type="button" value="next()">
+    <input class="nextAll"  type="button" value="nextAll()">
+    <input class="last"     type="button" value="last()">
+    &nbsp; / &nbsp;
+    <input class="siblings" type="button" value="siblings()">
+    &nbsp; / &nbsp;
+    <input class="children" type="button" value="children()">
+
+    <hr>
+    <div id="result">&nbsp;</div>
+</body>
+</html>

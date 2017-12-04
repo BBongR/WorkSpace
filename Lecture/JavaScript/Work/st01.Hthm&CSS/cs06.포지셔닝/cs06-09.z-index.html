@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>z-index</title>
+    <style type="text/css">
+    div { width: 100px; height: 100px; position: absolute; }
+    .b1 { background-color: red; left: 50px; top: 50px; z-index: 1; }
+    .b2 { background-color: orange; left: 100px; top: 70px; z-index: 3; }
+    .b3 { background-color: blue; left: 70px; top: 100px; z-index: 2; }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="box1" class="b1">1</div>
+        <div id="box2" class="b2">2</div>
+        <div id="box3" class="b3">3</div>
+    </div>
+</body>
+</html>

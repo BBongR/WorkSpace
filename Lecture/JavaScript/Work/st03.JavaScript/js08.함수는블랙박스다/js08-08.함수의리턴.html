@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script type="text/javascript">
+        /* * return 문 있을 때 - 결과값 리턴 */
+        var add = function(x,y){
+            var result = 0;
+            result = x+y;
+            return result;
+        };
+
+        var result = add(1,2);
+        console.log( result ) ; // (출력값) 3
+
+        /* * return 문 없을 때 - undefined 리턴 */
+        var noreturn = function noreturn() {
+            console.log('This function has no return statement.');
+        };
+        var result = noreturn();
+        console.log( result ) ; // (출력값) undefined
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        ul { float:left; margin:30px}
+        #id2 { width: 100px; height: 100px; margin-left: 50px; }
+        div,span { width: 70px; height: 50px; float:left;
+            background-color: red; cursor: pointer; margin: 5px
+        }
+        hr { clear:both; }
+    </style>
+    <script src='../jquery-3.1.1.js'></script>
+    <script>
+        $(document).ready( function(){
+            // a click
+            // 1. a 태그의 href 값을 가져온다.
+            // 2. id="img2" 의 src 에 1번의 값을 넣는다.
+            // 3. a 태그의 redirect 기능을 취소하시오.
+            $('a').on('click', function (event) {
+                var $href = $(this).attr('href');
+                $('#img2').attr('src', $href );
+                return false;
+            });
+
+            // id="img2" dblclick
+            // image 의 크기를 높이와 넓이를 100px 크게 하시오.
+            $('#img2').on('dblclick', function (event) {
+                var $widht = $('#img2').width() + 100;
+                var $height = $('#img2').height() + 100;
+                $('#img2').width( $widht );
+                $('#img2').height( $height );
+            });
+
+            // id="but1" 인 엘리먼트에 mouseover, mouseout, click 효과 넣기
+            $('#but1').on('mouseover', function (event) {
+                $('#but1').attr('src', 'images/but2.gif');
+            });
+            $('#but1').on('mouseout', function (event) {
+                $('#but1').attr('src', 'images/but1.gif');
+            });
+            $('#but1').on('click', function (event) {
+
+            });
+
+            // id="img-swap"인 엘리멘트에 hover 효과 넣기
+            $('#img-swap').on({
+                mouseover: function (event) { // over
+                    $(this).attr("src", "images/img_swap_on.png");
+                },
+                mouseout: function (event) { // out
+                    $(this).attr("src", "images/img_swap_off.png");
+                }
+            });
+
+            // span 엘리먼트에 mouseover, mouseout, mousedown, mouseup 효과 넣기
+            $('span').on({
+                'mouseover': function (event) {
+                    $(this).css('background', 'blue');
+                },
+                'mouseout': function (event) {
+                    $(this).css('background', 'red');
+                },
+                'mousedown': function (event) {
+                    $(this).css('background', 'pink');
+                },
+                'mouseup': function (event) {
+                    $(this).css('background', 'green');
+                }
+            });
+
+            // id="ID" 엘리먼트에 focus, blur 효과 넣기
+            $('#ID').on({
+                'focus': function (event) {
+                    //$(this) === $('#ID')
+                    $(this).css('border', '3px dashed #aa00aa');
+                },
+                'blur': function (event) {
+                    //$(this) === $('#ID')
+                    $(this).css('border', '');
+                }
+            });
+
+            // id="sel" 엘리먼트에 change 효과 넣기
+            $('#sel').on('change', function(){
+                var $value2 = $(this).val();
+                $('#img').attr('src',  $value2 ) ;
+            });
+
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li><a id="image3" href="images/image3.jpg"> 강아지 사진 </a></li>
+    <li><a id="image4" href="images/image4.jpg"> 고양이 사진 </a></li>
+</ul>
+<hr>
+
+<img src="images/but1.gif" id="but1" />
+<img src="images/img_swap_off.png" id="img-swap">
+<hr>
+
+<span></span> <span></span> <span></span>
+<hr>
+
+<select id="sel">
+    <option value="./images/strawberry.gif">딸기
+    <option value="./images/banana.gif">바나나
+    <option value="./images/apple.gif" selected>사과
+</select>
+<img id="img">
+<hr>
+
+<input TYPE="text" id="ID">
+<hr>
+
+<img id="img2"  />
+</body>
+</html>

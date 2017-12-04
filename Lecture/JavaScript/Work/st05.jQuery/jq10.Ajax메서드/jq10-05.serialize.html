@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼 데이터를 쿼리 스트링으로 변환</title>
+    <style>
+        div { font-weight: bold; color:red; }
+    </style>
+    <script src="../jquery-3.1.1.js"></script>
+    <script>
+
+        /*
+         검색조건: jquery form filed object
+
+         http://stackoverflow.com/questions/5603117/jquery-create-object-from-form-fields
+
+         사용법:  var obj = form2obj( $(form).serializeArray() );
+         */
+        var form2obj = function (arr) {
+
+            // var arr = $(form).serializeArray();
+            var obj = {};
+
+            for(var i = 0; i < arr.length; i++) {
+                if(obj[arr[i].name] === undefined) {
+                    obj[arr[i].name] = arr[i].value;
+                } else {
+                    if(!(obj[arr[i].name] instanceof Array)) {
+                        obj[arr[i].name] = [obj[arr[i].name]];
+                    }
+                    obj[arr[i].name].push(arr[i].value);
+                }
+            }
+            return obj;
+        };
+
+        $(document).ready(function(e){
+            $('#submit1').click( function(e){
+                var form_data = $('form').serialize(); // 문자열로 리턴
+                $('#result').text( form_data );
+            });
+            $('#submit2').click( function(e){
+                var form_data = $('form').serializeArray(); // 배열로 리턴
+
+                var printtext = '';
+                for( var i=0; i<form_data.length; i=i+1) {
+                    printtext = printtext + form_data[i].name + '=' + form_data[i].value + '<br>';
+                }
+
+                $('#result').html( form_data );
+            });
+            $('#submit3').click( function(e){
+                var obj = form2obj(  $('form').serializeArray()  );
+
+                // 객체를 문자열로 출력.
+                var str = JSON.stringify(obj);
+                $('#result').html( str );
+
+                // ajax 로 호출
+                // http://localhost:3000/login
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <input type="hidden" name="seq" value="1">
+        <label> 이름을 입력하세요 : </label>
+        <input type="text" name="username"/>  <br/>
+        <label> 패스워드를 입력하세요 :</label>
+        <input type="password"  name="password"/>  <br/>
+        <input type="checkbox" name="hobby" value="music"> music
+        <input type="checkbox" name="hobby" value="yoga"> yoga
+        <input type="checkbox" name="hobby" value="reading"> reading <br/>
+        <input type="button" id="submit1" value="serialize 전송"/>
+        <input type="button" id="submit2" value="serializeArray 전송"/>
+        <input type="button" id="submit3" value="serializeJSON 전송"/>
+    </form>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>

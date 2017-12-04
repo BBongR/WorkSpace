@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>상품 주문서</h1>
+    <form>
+
+
+        <!-- 개인 정보 -->
+        <fieldset style="width: 500px;">
+            <legend><font color="purple">개인 정보</font></legend>
+            <ul>
+                <li>
+                    <label><b>이름</b></label>
+                    <input type="text" name="name" placeholder="여백없이 입력" style="margin-left: 32px">
+                </li>
+                <li>
+                    <label><b>연락처</b></label>
+                    <input type="number" name="tel" placeholder="연락가능한 번호" style="margin-left: 16px">
+                </li>
+            </ul>
+        </fieldset>
+
+        <!-- 배송지 정보 -->
+        <fieldset style="width: 500px">
+            <legend><font color="purple">배송지 정보</font></legend>
+            <ul>
+                <li>
+                    <label><b>주소</b></label>
+                    <input type="text" name="add" style="width: 300px; margin-left: 32px">
+                </li>
+                <li>
+                    <label><b>전화번호</b></label>
+                    <input type="number" name="tel">
+                </li>
+                <li>
+                    <label><b>메 모</b></label>
+                    <textarea style="width: 300px; height: 50px; vertical-align: top; margin-left: 27px"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+
+        <!-- 주문 정보 -->
+        <fieldset style="width: 500px;">
+            <legend><font color="purple">주문 정보</font></legend>
+
+            <input type="checkbox" name="과테말라" style="margin-left: 20px">
+            <label>과테말라 안티구아(100g)</label>
+            <input type="text" name="" style="width: 30px" placeholder="0">개<br>
+
+            <input type="checkbox" name="만엘링" style="margin-left: 20px">
+            <label>인도테시아 만엘링(100g)</label>
+            <input type="text" name="" style="width: 30px" placeholder="0">개<br>
+
+
+            <input type="checkbox" name="블렌딩" style="margin-left: 20px">
+            <label>탐라는도다 블렌딩(100g)</label>
+            <input type="text" name="" style="width: 30px" placeholder="0">개<br>
+
+        </fieldset>
+
+
+        <!-- 주문하기 -->
+
+        <input type="submit" value="주문하기" name="주문하기" style="vertical-align: middle; margin-left: 200px">
+
+
+        <!-- 다시작성 : form 입력 값 초기화  -->
+        <input type="reset" value="다시작성" name="다시작성" style="vertical-align: middle;">
+
+    </form>
+
+</body>
+</html>
