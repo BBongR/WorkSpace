@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-    
+    <script type="text/javascript">
+        var foo = {
+            name : 'foo',
+            age : 30,
+            array : [1,4,5,5],
+            run : function(){
+                return this.name;
+            }
+        };
+
+        for( var i in foo){
+            console.log(typeof i, i+':'+foo[i], typeof foo[i]);
+        }
+    </script>
 </head>
 <body>
 
