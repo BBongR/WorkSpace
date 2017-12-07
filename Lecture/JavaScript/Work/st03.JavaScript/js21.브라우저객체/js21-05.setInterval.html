@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-	
-</head>
+	<title>타이머 기능</title>
+	<script type="text/javascript">
+		var timer = null;
+		window.onload = function(e){
+			
 
+			//버튼 이벤트 핸들러 작성 : 2개
+			var start = document.getElementById("start");
+			start.onclick = function(e){
+				// 1. start 버튼의 비활성화
+				// 2. stop 버튼의 활성화
+				// 3. 시계 시작
+				start.disabled = true;
+				stop.disabled = false;
+				timer = setInterval(function(){
+				var t = new Date().toLocaleTimeString();
+				var result = document.getElementById('result');
+				result.innerHTML = t;
+			}, 1000);
+			}
+
+			var stop = document.getElementById("stop");
+			stop.onclick = function(e){
+				// 1. start 버튼의 활성화
+				// 2. stop 버튼의 비활성화
+				// 3. 시계 중지
+				start.disabled = false;
+				stop.disabled = true;
+				clearInterval(timer);
+			}
+		};
+	</script>
+</head>
 <body>
-<p>
-    <input id='start' type="button" value="타이머 시작" />
-    <input id='stop'  type="button" value="타이머 정지" />
-    <div id="result">
-	</div>
-</p>
+	<input id="start" type="button" value="타이머 시작">
+	<input id="stop" type="button" value="타이머 정지" disabled="disabled">
+	<div id='result'></div>
 </body>
 </html>
-
-
-

@@ -1,19 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    
-    
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script type="text/javascript">
+		var timer = null;
+		var images = [
+		"images/00.png",
+		"images/01.png",
+		"images/02.png",
+		"images/03.png",
+		"images/04.png",
+		"images/05.png",
+		"images/06.png",
+		"images/07.png",
+		"images/08.png",
+		"images/09.png",
+		"images/10.png",
+		"images/11.png",
+		"images/12.png",
+		"images/13.png",
+		"images/14.png"
+		];
+
+		window.onload = function(){
+			var next = document.getElementById("next");
+			next.onclick = function(){
+				var img = document.getElementById("img");
+				var cno = img.src.substr(img.src.length-1-5, 2);
+				cno = Number(cno) +1 // '00' -> 0 -> images[0];
+
+				if(cno===15){
+					cno = 0;
+				}
+
+				img.src = images[cno];
+			};
+
+			var prev = document.getElementById("prev");
+			prev.onclick = function(){
+				var img = document.getElementById("img");
+				var cno = img.src.substr(img.src.length-1-5, 2);
+				cno = Number(cno) -1 // '00' -> 0 -> images[0];
+
+				if(cno===-1){
+					cno = 14;
+				}
+				
+				img.src = images[cno];
+			};
+
+			var start = document.getElementById("start");
+			start.onclick = function(){
+				// 1. start 버튼의 비활성화
+				// 2. stop 버튼의 활성화
+				// 3. interval 시작
+				start.disabled = true;
+				stop.disabled = false;
+				timer = setInterval(function(){var img = document.getElementById("img");
+					var cno = img.src.substr(img.src.length-1-5, 2);
+				cno = Number(cno) +1 // '00' -> 0 -> images[0];
+
+				if(cno===15){
+					cno = 0;
+				}
+
+				img.src = images[cno];}, 100); //0.1초
+			};
+
+			var stop = document.getElementById("stop");
+			stop.onclick = function(){
+				// 1. start 버튼의 활성화
+				// 2. stop 버튼의 비활성화
+				// 3. interval 중지
+				start.disabled = false;
+				stop.disabled = true;
+				clearTimeout(timer);
+			};
+		};
+	</script>
 </head>
 <body>
-    
-    <input id='prev'  type="button" value="<<" />
-    <input id='next'  type="button" value=">>" />
-    <input id='start' type="button" value="시작" />
-    <input id='stop'  type="button" value="정지" />
 
-    <img id='img' src="images/00.png">
+	<input id='prev'  type="button" value="<<" />
+	<input id='next'  type="button" value=">>" />
+	<input id='start' type="button" value="시작" />
+	<input id='stop'  type="button" value="정지" />
+
+	<img id='img' src="images/00.png">
 
 </body>
 </html>

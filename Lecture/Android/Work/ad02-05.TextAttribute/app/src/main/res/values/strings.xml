@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TextAttribute</string>
+    <string name="app_name2">속성 변경 후 : string.xml</string>
+</resources>

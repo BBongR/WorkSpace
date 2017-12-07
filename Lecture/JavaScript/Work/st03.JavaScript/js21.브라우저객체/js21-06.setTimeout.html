@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style></style>
-	
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style></style>
+	<script type="text/javascript">
+		var timer = null;
+
+		window.onload = function(){
+			timer = setTimeout(function(){
+				var t = new Date().toLocaleTimeString();
+				var result = document.getElementById('result');
+				result.innerHTML = t;
+			}, 1000);
+
+			// 버튼 이벤트 핸들러 작성 : 2개
+			var button = document.getElementsByTagName('input');
+			button[0].onclick = function(){
+				// 텍스트 지우기
+				var result = document.getElementById('result');
+				result.innerHTML = "";
+
+				// Timerout 지우기
+				clearTimeout(timer);
+			};
+		};
+	</script>
 </head>
 
 <body>
-<p>
-    <input type="button" value="클리어" />
-	<div id="result"></div>
+	<p>
+		<input type="button" value="클리어" />
+		<div id="result"></div>
 
 
-</p>
+	</p>
 </body>
 </html>
 
