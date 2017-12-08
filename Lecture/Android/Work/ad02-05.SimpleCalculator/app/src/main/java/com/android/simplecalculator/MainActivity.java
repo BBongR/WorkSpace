@@ -10,87 +10,90 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Double first = 0.0;
-    Double end = 0.0;
+    private EditText edtFirst = null;
+    private EditText edtEnd = null;
 
-    private EditText Edit1 = null;
-    private EditText Edit2 = null;
+    private Button btnAdd = null;
+    private Button btnSub = null;
+    private Button btnMul = null;
+    private Button btnDiv = null;
+    private Button btnRem = null;
 
-    private Button BtnAdd = null;
-    private Button BtnSub = null;
-    private Button BtnMul = null;
-    private Button BtnDiv = null;
-    private Button BtnRem = null;
-
-    private TextView TextResult = null;
+    private TextView txtResult = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Edit1 = findViewById(R.id.Edit1);
-        Edit2 = findViewById(R.id.Edit2);
+        edtFirst = findViewById(R.id.edtFirst);
+        edtEnd = findViewById(R.id.edtEnd);
 
-        BtnAdd = findViewById(R.id.BtnAdd);
-        BtnSub = findViewById(R.id.BtnSub);
-        BtnMul = findViewById(R.id.BtnMul);
-        BtnDiv = findViewById(R.id.BtnDiv);
-        BtnRem = findViewById(R.id.BtnRem);
+        btnAdd = findViewById(R.id.btnAdd);
+        btnSub = findViewById(R.id.btnSub);
+        btnMul = findViewById(R.id.btnMul);
+        btnDiv = findViewById(R.id.btnDiv);
+        btnRem = findViewById(R.id.btnRem);
 
-        TextResult = findViewById(R.id.TextResult);
+        txtResult = findViewById(R.id.txtResult);
 
-        Innerclass inner = new Innerclass();
+        calculator cal = new calculator();
+        btnAdd.setOnClickListener(cal);
+        btnSub.setOnClickListener(cal);
+        btnMul.setOnClickListener(cal);
+        btnDiv.setOnClickListener(cal);
+        btnRem.setOnClickListener(cal);
 
-        BtnAdd.setOnClickListener(inner);
-        BtnSub.setOnClickListener(inner);
-        BtnMul.setOnClickListener(inner);
-        BtnDiv.setOnClickListener(inner);
-        BtnRem.setOnClickListener(inner);
-
+        setTitle(R.string.title);
     }
 
-    private class Innerclass implements View.OnClickListener {
+    private class calculator implements View.OnClickListener {
 
         @Override
         public void onClick(View view) {
-            first = Double.valueOf(Edit1.getText().toString());
-            end = Double.valueOf(Edit2.getText().toString());
+
+            Double first = null;
+            Double end = null;
             String result = "";
+            int id = view.getId();
 
-            switch (view.getId()) {
-                case R.id.BtnAdd:
+            if (!(edtFirst.getText().toString().equals("") || edtEnd.getText().toString().equals(""))) {
+                first = Double.valueOf(edtFirst.getText().toString());
+                end = Double.valueOf(edtEnd.getText().toString());
+            }
+
+            if (first == null || end == null) {
+                Toast.makeText(getApplicationContext(), "두 값을 입력하세요", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            switch (id) {
+                case R.id.btnAdd:
                     result = String.valueOf(first + end);
-                    TextResult.setText(result);
+                    txtResult.setText(result);
                     break;
 
-                case R.id.BtnSub:
+                case R.id.btnSub:
                     result = String.valueOf(first - end);
-                    TextResult.setText(result);
+                    txtResult.setText(result);
                     break;
-
-                case R.id.BtnMul:
+                case R.id.btnMul:
                     result = String.valueOf(first * end);
-                    TextResult.setText(result);
+                    txtResult.setText(result);
                     break;
-
-                case R.id.BtnDiv:
+                case R.id.btnDiv:
                     if (end == 0) {
                         Toast.makeText(getApplicationContext(), "0으로 나눌수 없습니다.", Toast.LENGTH_SHORT).show();
                         break;
                     } else {
                         result = String.valueOf(first / end);
-                        TextResult.setText(result);
+                        txtResult.setText(result);
                         break;
                     }
-
-                case R.id.BtnRem:
+                case R.id.btnRem:
                     result = String.valueOf(first % end);
-                    TextResult.setText(result);
+                    txtResult.setText(result);
                     break;
-
-                default:
-                    Toast.makeText(getApplicationContext(), "숫자를 입력해라", Toast.LENGTH_SHORT).show();
             }
         }
     }

@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private class innerclass implements View.OnClickListener{ // 내부 클래스 리스너
-
         @Override
         public void onClick(View view) {
             Toast.makeText(getApplicationContext(),"내부 클래스 리스너", Toast.LENGTH_SHORT).show();

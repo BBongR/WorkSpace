@@ -4,61 +4,42 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        div.rect, span.rect {
-            width: 60px;
-            height: 40px;
-            float: left;
-            margin: 10px;
-            background-color: #EEEEEE;
-        }
-        hr { clear:both; }
-    </style>
-    <script src='../jquery-3.1.1.js'></script>
-    <script>
-        var MYAPP = {};  // === window.MyApp;
-        MYAPP.init = function(){
+    div.rect, span.rect {
+        width: 60px;
+        height: 40px;
+        float: left;
+        margin: 10px;
+        background-color: #EEEEEE;
+    }
+    hr { clear:both; }
+</style>
+<script type="text/javascript" src="../jquery-3.2.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
 
-		   $('*').css('border', '');
-           $('*').css('background', '');
-
-            /*
-             $('*').css('border', '').css('background', '');
-             */
-
-            /*
-            var style = {
-                'border': '',
-                'background' : ''
-            };
-
-            $('*').css( style );
-            */
-        };
-
-        $(document).ready( function(e) {
-
-            $('#all').click( function(e) {
-                MYAPP.init();
-                $('*').css('border', '1px dotted red');
-            });
-            $('#id').click( function(e) {
-                MYAPP.init();
-                $('#content').css('background', 'yellow');
-            });
-            $('#element').click( function(event) {
-            	MYAPP.init();
-                $('div').css('border', '2px solid red');
-            });
-            $('#class').click( function(event) {
-            	MYAPP.init();
-                $('.myClass').css( 'border', '2px dashed blue');
-            });
-            $('#multi').click( function(event) {
-            	MYAPP.init();
-                $('#content, p').css('border', '2px dashed blue');
-            });
+        $('#all').click(function(event) {
+            // style = "border: 1px dotted red;"
+            $('*').css('border', '1px dotted red');
         });
-    </script>
+
+        $('#id').click(function(event) {
+            $('#content').css('backgroundColor', 'yellow');
+
+        });
+
+        $('#element').click(function(event) {
+            $('div').css('border', '2px solid blue');
+        });
+
+        $('#class').click(function(event) {
+            $('.myClass').css('border', '2px dashed blue');
+        });
+
+        $('#multi').click(function(event) {
+            $('p, #content').css('border', '2px dashed blue');
+        });
+    });
+</script>
 </head>
 <body>
     <h2>jQuery Selector</h2>
@@ -80,3 +61,10 @@
     <input id='multi'   type='button' value="multi">
 </body>
 </html>
+
+
+
+
+
+
+

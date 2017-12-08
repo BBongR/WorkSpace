@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SimpleCalculator</string>
+    <string name="btn_Add">더 하 기</string>
+    <string name="btn_Sub">빼 기</string>
+    <string name="btn_Mul">곱 셈</string>
+    <string name="btn_Div">나 누 기</string>
+    <string name="btn_Rem">나 머 지</string>
+    <string name="title">계 산 기 (string.xml에서 수정후)</string>
 </resources>

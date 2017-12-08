@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llo0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.petapp.MainActivity">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    
+        <LinearLayout
+            android:id="@+id/llo1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="선택을 시작하겠습니까?"/>
+        
+            <CheckBox
+                android:id="@+id/chkStart"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="시작함"/>
+    
+            <LinearLayout
+                android:id="@+id/llo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+    
+                <RadioGroup
+                    android:id="@+id/radioG1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+        
+                    <RadioButton
+                        android:id="@+id/radioG1dog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="강아지"/>
+        
+                    <RadioButton
+                        android:id="@+id/radioG1cat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="고양이"/>
+        
+                    <RadioButton
+                        android:id="@+id/radioG1rabbit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="토끼"/>
+    
+                </RadioGroup>
+    
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="선택 완료"
+                    android:visibility="gone"/>
+    
+                <ImageView
+                    android:id="@+id/img1dog"
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/asd"/>
+    
+                <ImageView
+                    android:id="@+id/img3rabbit"
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/as"/>
+    
+                <ImageView
+                    android:id="@+id/img2cat"
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/i"/>
+            </LinearLayout>
+    
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

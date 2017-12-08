@@ -3,55 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<style>
-	    div, span { background: #FFF; padding: 10px; margin: 10px; }
-        hr { clear:both; }
-    </style>
-	<script src='../jquery-3.1.1.js'></script>
-	<script>
-		var MYAPP = {};  // === window.MYAPP;
-		MYAPP.init = function(){
-			$('*').css('border','').css('background','');
-		};
-
-		$(document).ready( function(event){
-			$('#has'      ).click( function(event){
-				MYAPP.init();
-				$('a[target]').css('background', 'gray');
-			});
-			$('#equal'    ).click( function(event){
-				MYAPP.init();
-				$('a[href = "http://slqer.com"]').css('background', 'gray');
-			});
-			$('#notequal' ).click( function(event){
-				MYAPP.init();
-				$('a[href != "http://slqer.com"]').css('background', 'gray');
-			});
-			$('#startwith').click( function(event){
-				MYAPP.init();
-				$('a[href ^= "http://h"]').css('background', 'gray');
-			});
-			$('#endwith' ).click( function(event){
-				MYAPP.init();
-				$('a[href $= "net"]').css('background', 'gray');
-			});
-			$('#contains' ).click( function(event){
-				MYAPP.init();
-				$('a[name *= "man"]').css('background', 'gray');
-			});
-			$('#findword' ).click( function(event){
-				MYAPP.init();
-				$('a[name ~= "man"]').css('background', 'gray');
-			});
+	div, span { background: #FFF; padding: 10px; margin: 10px; }
+	hr { clear:both; }
+</style>
+<script type="text/javascript" src="../jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#has').click(function(event) {
+			$('a[target]').css('background-color', 'gray');
 		});
-	</script>
+		$('#equal').click(function(event) {
+			$('a[href = "http://slqer.com"]').css('background-color', 'gray');
+		});
+		$('#notequal').click(function(event) {
+			$('a[href != "http://slqer.com"]').css('background-color', 'gray');
+		});
+		$('#startwith').click(function(event) {
+			$('a[href ^= "http://ho"').css('background-color', 'pink');
+		});
+		$('#endwith').click(function(event) {
+			$('a[href $= "net"').css('background-color', 'green');
+		});
+		$('#contains').click(function(event) {
+			$('a[href *= "hoons"').css('background-color', 'yellow');
+		});
+		$('#findword').click(function(event) {
+			$('a[name ~= "man"').css('background-color', 'yellow');
+		});
+	});
+</script>
+
+
 </head>
 <body>
 	<h2>Attribute Selector</h2>
 	<div>
-	    <a name='man'      href="http://slqer.com">SQLER.COM(No Target)</a><br />
-	    <a name='superman' href="http://slqer.com" target="_blank">SQLER.COM(Target)</a><br />
-	    <a name='iron man' href="http://hoons.net">Hoons.NET(No Target)</a><br />
-	    <a name='bat man'  href="http://hoons.net" target="_blank">Hoons.NET(Target)</a><br />
+		<a name='man'      href="http://slqer.com">SQLER.COM(No Target)</a><br />
+		<a name='superman' href="http://slqer.com" target="_blank">SQLER.COM(Target)</a><br />
+		<a name='iron man' href="http://hoons.net">Hoons.NET(No Target)</a><br />
+		<a name='bat man'  href="http://hoons.net" target="_blank">Hoons.NET(Target)</a><br />
 	</div>
 	<a name='joker'  href="http://hows.co.kr">Hows.co.kr(No Target)</a><br />
 	<a name='manual' href="http://hows.co.kr" target="_blank">Hows.co.kr(No Target)</a><br />
@@ -66,3 +56,10 @@
 	<input id='findword'  type='button' value='man findword' >
 </body>
 </html>
+
+
+
+
+
+
+
