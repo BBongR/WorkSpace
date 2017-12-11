@@ -1,0 +1,9 @@
+* android:drawableLeft   - 텍스트를 기준으로 왼쪽에 이미지 출력.
+* android:drawableTop    - 텍스트를 기준으로 위쪽에 이미지 출력.
+* android:drawableRight  - 텍스트를 기준으로 오른쪽에 이미지 출력.
+* android:drawableBottom - 텍스트를 기준으로 아래쪽에 이미지 출력.
+
+* android:drawableStart  - 텍스트를 기준으로 시작 위치에 이미지 출력.
+* android:drawableEnd    - 텍스트를 기준으로 끝 위치에 이미지 출력.
+
+* baseLineAligned - 한 쪽 방향으로 정렬하기 디폴트값: Top,left        gravity랑 같이써서 right, bottom 정렬할수 있음

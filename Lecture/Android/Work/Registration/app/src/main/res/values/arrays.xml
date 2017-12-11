@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="major">
+        <item>알파인스키</item>
+        <item>바이애슬론</item>
+        <item>봅슬레이</item>
+        <item>크로스컨트리 스키</item>
+        <item>컬링</item>
+        <item>피겨 스케이팅</item>
+        <item>프리스타일 스키</item>
+        <item>루지</item>
+        <item>노르딕 복합</item>
+        <item>쇼트트랙 스피드 스케이팅</item>
+        <item>스켈레톤</item>
+        <item>스키점프</item>
+        <item>스노보드</item>
+        <item>스피드 스케이팅</item>
+    </string-array>
+</resources>
