@@ -28,11 +28,14 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_Ac;
     private Button btn_C;
 
-    private String text;
+    private String text = "";
+    private String result = "";
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.textView);
 
@@ -54,125 +57,140 @@ public class MainActivity extends AppCompatActivity {
         btn_Ac = findViewById(R.id.btn_Ac);
         btn_C = findViewById(R.id.btn_C);
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         btn_0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                String zero = "0";
-//                textView.setText(zero);
+                text += "0";
+                textView.setText(text);
             }
         });
 
         btn_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "1";
+                textView.setText(text);
             }
         });
 
         btn_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "2";
+                textView.setText(text);
             }
         });
 
         btn_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "3";
+                textView.setText(text);
             }
         });
 
         btn_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "4";
+                textView.setText(text);
             }
         });
 
         btn_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "5";
+                textView.setText(text);
             }
         });
 
         btn_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "6";
+                textView.setText(text);
             }
         });
 
         btn_7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "7";
+                textView.setText(text);
             }
         });
 
         btn_8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "8";
+                textView.setText(text);
             }
         });
 
         btn_9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "9";
+                textView.setText(text);
             }
         });
 
         btn_Div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "÷";
+                textView.setText(text);
             }
         });
 
         btn_Mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "×";
+                textView.setText(text);
             }
         });
         btn_Sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "-";
+                textView.setText(text);
             }
         });
 
         btn_Plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text += "+";
+                textView.setText(text);
             }
         });
 
         btn_Equal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                result = text;
+                textView.setText(result);
             }
         });
 
         btn_Ac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(text.length() > 0) {
+                    text = text.substring(0, text.length() - 1);
+                    textView.setText(text);
+                }
             }
         });
 
         btn_C.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                text = "";
+                textView.setText(text);
             }
         });
     }

@@ -13,7 +13,8 @@
         android:layout_height="150dp"
         android:layout_columnSpan="4"
         android:layout_row="0"
-        android:background="@color/colorLightYellow" />
+        android:background="@color/colorLightYellow"
+        android:textSize="30dp"/>
 
     <GridLayout
         android:layout_width="match_parent"
