@@ -5,193 +5,255 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView textView;
-
-    private Button btn_0;
-    private Button btn_1;
-    private Button btn_2;
-    private Button btn_3;
-    private Button btn_4;
-    private Button btn_5;
-    private Button btn_6;
-    private Button btn_7;
-    private Button btn_8;
-    private Button btn_9;
-    private Button btn_Div;
-    private Button btn_Mul;
-    private Button btn_Sub;
-    private Button btn_Plus;
-    private Button btn_Equal;
-    private Button btn_Ac;
-    private Button btn_C;
-
-    private String text = "";
-    private String result = "";
+    String text = "";
+    String r = "";
+    TextView textView;
+    Calc c = new Calc();
+    String text2 = ""; // 텍스트를 리플레이스 한 값
+    String tmp = "";
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.textView);
 
-        btn_0 = findViewById(R.id.btn_0);
-        btn_1 = findViewById(R.id.btn_1);
-        btn_2 = findViewById(R.id.btn_2);
-        btn_3 = findViewById(R.id.btn_3);
-        btn_4 = findViewById(R.id.btn_4);
-        btn_5 = findViewById(R.id.btn_5);
-        btn_6 = findViewById(R.id.btn_6);
-        btn_7 = findViewById(R.id.btn_7);
-        btn_8 = findViewById(R.id.btn_8);
-        btn_9 = findViewById(R.id.btn_9);
-        btn_Div = findViewById(R.id.btn_Div);
-        btn_Mul = findViewById(R.id.btn_Mul);
-        btn_Sub = findViewById(R.id.btn_Sub);
-        btn_Plus = findViewById(R.id.btn_Plus);
-        btn_Equal = findViewById(R.id.btn_Equal);
-        btn_Ac = findViewById(R.id.btn_Ac);
-        btn_C = findViewById(R.id.btn_C);
+        Button btn_0 = findViewById(R.id.btn_0);
+        Button btn_1 = findViewById(R.id.btn_1);
+        Button btn_2 = findViewById(R.id.btn_2);
+        Button btn_3 = findViewById(R.id.btn_3);
+        Button btn_4 = findViewById(R.id.btn_4);
+        Button btn_5 = findViewById(R.id.btn_5);
+        Button btn_6 = findViewById(R.id.btn_6);
+        Button btn_7 = findViewById(R.id.btn_7);
+        Button btn_8 = findViewById(R.id.btn_8);
+        Button btn_9 = findViewById(R.id.btn_9);
 
-        btn_0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "0";
-                textView.setText(text);
-            }
-        });
+        Button btn_Point = findViewById(R.id.btn_Point);
+        Button btn_Equal = findViewById(R.id.btn_Equal);
 
-        btn_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "1";
-                textView.setText(text);
-            }
-        });
+        Button btn_Plus = findViewById(R.id.btn_Plus);
+        Button btn_Sub = findViewById(R.id.btn_Sub);
+        Button btn_Mul = findViewById(R.id.btn_Mul);
+        Button btn_Div = findViewById(R.id.btn_Div);
 
-        btn_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "2";
-                textView.setText(text);
-            }
-        });
+        Button btn_Ac = findViewById(R.id.btn_Ac);
+        Button btn_C = findViewById(R.id.btn_C);
 
-        btn_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "3";
-                textView.setText(text);
-            }
-        });
+        Btninner btninner = new Btninner();
+        btn_0.setOnClickListener(btninner);
+        btn_1.setOnClickListener(btninner);
+        btn_2.setOnClickListener(btninner);
+        btn_3.setOnClickListener(btninner);
+        btn_4.setOnClickListener(btninner);
+        btn_5.setOnClickListener(btninner);
+        btn_6.setOnClickListener(btninner);
+        btn_7.setOnClickListener(btninner);
+        btn_8.setOnClickListener(btninner);
+        btn_9.setOnClickListener(btninner);
 
-        btn_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "4";
-                textView.setText(text);
-            }
-        });
+        btn_Point.setOnClickListener(btninner);
+        btn_Equal.setOnClickListener(btninner);
 
-        btn_5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "5";
-                textView.setText(text);
-            }
-        });
+        btn_Plus.setOnClickListener(btninner);
+        btn_Sub.setOnClickListener(btninner);
+        btn_Mul.setOnClickListener(btninner);
+        btn_Div.setOnClickListener(btninner);
 
-        btn_6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "6";
-                textView.setText(text);
-            }
-        });
+        btn_Ac.setOnClickListener(btninner);
+        btn_C.setOnClickListener(btninner);
+    }
 
-        btn_7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "7";
-                textView.setText(text);
-            }
-        });
+    private class Btninner implements Button.OnClickListener {
 
-        btn_8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "8";
-                textView.setText(text);
-            }
-        });
-
-        btn_9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "9";
-                textView.setText(text);
-            }
-        });
-
-        btn_Div.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "÷";
-                textView.setText(text);
-            }
-        });
-
-        btn_Mul.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "×";
-                textView.setText(text);
-            }
-        });
-        btn_Sub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "-";
-                textView.setText(text);
-            }
-        });
-
-        btn_Plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text += "+";
-                textView.setText(text);
-            }
-        });
-
-        btn_Equal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                result = text;
-                textView.setText(result);
-            }
-        });
-
-        btn_Ac.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(text.length() > 0) {
-                    text = text.substring(0, text.length() - 1);
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.btn_0:
+                    text += "0";
+                    tmp += "0";
                     textView.setText(text);
-                }
-            }
-        });
 
-        btn_C.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text = "";
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("00")) {
+                        tmp = "0";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
+
+                    break;
+
+                case R.id.btn_1:
+                    text += "1";
+                    tmp += "1";
+                    textView.setText(text);
+
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("01")) {
+                        tmp = "1";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
+                    break;
+
+                case R.id.btn_2:
+                    text += "2";
+                    tmp += "2";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_3:
+                    text += "3";
+                    tmp += "3";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_4:
+                    text += "4";
+                    tmp += "4";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_5:
+                    text += "5";
+                    tmp += "5";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_6:
+                    text += "6";
+                    tmp += "6";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_7:
+                    text += "7";
+                    tmp += "7";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_8:
+                    text += "8";
+                    tmp += "8";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_9:
+                    text += "9";
+                    tmp += "9";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_Point:
+                    text += ".";
+                    tmp += ".";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_Equal:
+                    if (!((text.contains("+")) || (text.contains("-")) || (text.contains("×")) || (text.contains("÷")))) {
+                    break;
+                }
+
+                if (text.equals("")) {
+                    break;
+                }
+
+                if ((text.charAt(text.length() - 1) == '×') || (text.charAt(text.length() - 1) == '÷') || (text.charAt(text.length() - 1) == '+') || (text.charAt(text.length() - 1) == '-')) {
+                    Toast.makeText(getApplicationContext(), "식은 숫자로 끝나야 합니다", Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
+                if (!c.bracketsBalance(text)) {
+                    break;
+                }
+
+                text2 = text.replace("×", "*");
+                text2 = text2.replace("÷", "/");
+
+                // 중위 표기법을 후위 표기법으로 바꾸기
+                String postfixExp = c.postfix(text2);
+
+                // 후위 표기법을 이용하여 수식 계산
+                Double result = c.result(postfixExp);
+                r = String.valueOf(result);
+
+                text = text + "=" + r;
                 textView.setText(text);
+                text = "";
+                break;
+
+                case R.id.btn_Plus:
+                    if (text.equals("")) {
+                        break;
+                    }
+
+                    if ((text.charAt(text.length() - 1) == '×') || (text.charAt(text.length() - 1) == '÷') || (text.charAt(text.length() - 1) == '+') || (text.charAt(text.length() - 1) == '-')) {
+                        text = text.substring(0, text.length() - 1);
+                    }
+                    text += "+";
+                    textView.setText(text);
+                    tmp = "";
+                    break;
+
+                case R.id.btn_Sub:
+                    if (text.equals("")) {
+                        break;
+                    }
+
+                    if ((text.charAt(text.length() - 1) == '×') || (text.charAt(text.length() - 1) == '÷') || (text.charAt(text.length() - 1) == '+') || (text.charAt(text.length() - 1) == '-')) {
+                        text = text.substring(0, text.length() - 1);
+                    }
+                    text += "-";
+                    textView.setText(text);
+                    tmp = "";
+                    break;
+
+                case R.id.btn_Mul:
+                    if (text.equals("")) {
+                        break;
+                    }
+
+                    if ((text.charAt(text.length() - 1) == '×') || (text.charAt(text.length() - 1) == '÷') || (text.charAt(text.length() - 1) == '+') || (text.charAt(text.length() - 1) == '-')) {
+                        text = text.substring(0, text.length() - 1);
+                    }
+                    text += "×";
+                    textView.setText(text);
+                    tmp = "";
+                    break;
+
+                case R.id.btn_Div:
+                    if (text.equals("")) {
+                        break;
+                    }
+
+                    if ((text.charAt(text.length() - 1) == '×') || (text.charAt(text.length() - 1) == '÷') || (text.charAt(text.length() - 1) == '+') || (text.charAt(text.length() - 1) == '-')) {
+                        text = text.substring(0, text.length() - 1);
+                    }
+                    text += "÷";
+                    textView.setText(text);
+                    tmp = "";
+                    break;
+
+                case R.id.btn_Ac:
+                    text = "";
+                    tmp = "";
+                    textView.setText(text);
+                    break;
+
+                case R.id.btn_C:
+                    if (text.length() > 0) {
+                        text = text.substring(0, text.length() - 1);
+                        textView.setText(text);
+                    }
+                    break;
             }
-        });
+        }
     }
 }
+
