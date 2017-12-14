@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.datetimewidget.MainActivity">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+    
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="아날로그와 디지털"
+                    android:textSize="30sp"/>
+    
+                <AnalogClock
+                    android:id="@+id/analogClock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+    
+                <DigitalClock
+                    android:id="@+id/digitalClock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:textSize="50sp"/>
+            
+            </LinearLayout>
+    
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical">
+    
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/holo_purple"
+                    android:gravity="center"
+                    android:text="스톱워치"
+                    android:textSize="30sp"/>
+    
+                <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:format="시간 측정: %s"
+                    android:gravity="center"
+                    android:textSize="30sp"/>
+    
+            </LinearLayout>
+    
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical">
+    
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/holo_red_light"
+                    android:gravity="center"
+                    android:text="타임피커"
+                    android:textSize="30sp"/>
+    
+                <TimePicker
+                    android:id="@+id/timePicker1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="clock">
+    
+                </TimePicker>
+    
+                <TimePicker
+                    android:id="@+id/timePicker2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:timePickerMode="spinner">
+    
+                </TimePicker>
+    
+            </LinearLayout>
+    
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical">
+    
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/colorActivatedHighlight"
+                    android:gravity="center"
+                    android:text="데이트피커와 켈린더뷰"
+                    android:textSize="30sp"/>
+    
+                <DatePicker
+                    android:id="@+id/datePicker1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="calendar"/>
+    
+                <DatePicker
+                    android:id="@+id/datePicker2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:datePickerMode="spinner"/>
+    
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="50dp"/>
+    
+            </LinearLayout>
+    
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical">
+    
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"/>
+    
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Button"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
