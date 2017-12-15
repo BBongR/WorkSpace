@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     String text = "";
     String temp = "";
-    String r = "";
 
     Calc c = new Calc();
 
@@ -142,7 +141,8 @@ public class MainActivity extends AppCompatActivity {
 
                     // 후위 표기법을 이용하여 수식 계산
                     Double result = c.result(postfixExp);
-                    r = String.valueOf(result);
+
+                    break;
 
                 case R.id.btnPlus:
                     text += "+";
