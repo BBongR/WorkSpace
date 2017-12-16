@@ -25,4 +25,8 @@ public class Dog {
 	public void sleep(String x, int y) {
 		System.out.println("sleep( String y, int x )");
 	}
+	
+	public void sleep(int x, int y, int z ) {
+	    System.out.println(x+y+z);
+	}
 }
