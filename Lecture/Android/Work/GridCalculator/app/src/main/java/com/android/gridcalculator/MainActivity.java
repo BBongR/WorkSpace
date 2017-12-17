@@ -236,6 +236,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
 
+
                 text2 = text.replace("×", "*");
                 text2 = text2.replace("÷", "/");
 
