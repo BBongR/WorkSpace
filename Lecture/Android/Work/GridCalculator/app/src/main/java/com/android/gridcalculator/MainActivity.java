@@ -77,15 +77,14 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_0:
                     text += "0";
                     tmp += "0";
-                    textView.setText(text);
+                    textView.setText(text); // 00
 
                     if (tmp.length() > 1 && tmp.substring(0, 2).equals("00")) {
                         tmp = "0";
-                        text = text.substring(0, text.length() - 2);
+                        text = text.substring(0, text.length() - 2); // 00
                         text = text + tmp;
                         textView.setText(text);
                     }
-
                     break;
 
                 case R.id.btn_1:
@@ -105,58 +104,122 @@ public class MainActivity extends AppCompatActivity {
                     text += "2";
                     tmp += "2";
                     textView.setText(text);
+
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("02")) {
+                        tmp = "2";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
                     break;
 
                 case R.id.btn_3:
                     text += "3";
                     tmp += "3";
                     textView.setText(text);
+
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("03")) {
+                        tmp = "3";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
                     break;
 
                 case R.id.btn_4:
                     text += "4";
                     tmp += "4";
                     textView.setText(text);
+
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("04")) {
+                        tmp = "4";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
                     break;
 
                 case R.id.btn_5:
                     text += "5";
                     tmp += "5";
                     textView.setText(text);
+
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("05")) {
+                        tmp = "5";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
                     break;
 
                 case R.id.btn_6:
                     text += "6";
                     tmp += "6";
                     textView.setText(text);
+
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("06")) {
+                        tmp = "6";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
                     break;
 
                 case R.id.btn_7:
                     text += "7";
                     tmp += "7";
                     textView.setText(text);
+
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("07")) {
+                        tmp = "7";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
                     break;
 
                 case R.id.btn_8:
                     text += "8";
                     tmp += "8";
                     textView.setText(text);
+
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("08")) {
+                        tmp = "8";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
                     break;
 
                 case R.id.btn_9:
                     text += "9";
                     tmp += "9";
                     textView.setText(text);
+
+                    if (tmp.length() > 1 && tmp.substring(0, 2).equals("09")) {
+                        tmp = "9";
+                        text = text.substring(0, text.length() - 2);
+                        text = text + tmp;
+                        textView.setText(text);
+                    }
                     break;
 
                 case R.id.btn_Point:
+                    if(tmp.equals("")){
+                        break;
+                    }
+
+                    if(tmp.contains(".")){
+                        break;
+                    }
+
                     text += ".";
                     tmp += ".";
                     textView.setText(text);
                     break;
 
                 case R.id.btn_Equal:
-                    if (!((text.contains("+")) || (text.contains("-")) || (text.contains("×")) || (text.contains("÷")))) {
+                    if (!((text.contains("+")) || (text.contains("-")) || (text.contains("×")) || (text.contains("÷"))) && !(text.charAt(text.length() - 1) == '.')) {
                     break;
                 }
 
@@ -164,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
 
-                if ((text.charAt(text.length() - 1) == '×') || (text.charAt(text.length() - 1) == '÷') || (text.charAt(text.length() - 1) == '+') || (text.charAt(text.length() - 1) == '-')) {
+                if ((text.charAt(text.length() - 1) == '×') || (text.charAt(text.length() - 1) == '÷') || (text.charAt(text.length() - 1) == '+') || (text.charAt(text.length() - 1) == '-') || (text.charAt(text.length() - 1) == '.')) {
                     Toast.makeText(getApplicationContext(), "식은 숫자로 끝나야 합니다", Toast.LENGTH_SHORT).show();
                     break;
                 }
@@ -172,6 +235,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!c.bracketsBalance(text)) {
                     break;
                 }
+
 
                 text2 = text.replace("×", "*");
                 text2 = text2.replace("÷", "/");
