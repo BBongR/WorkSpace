@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
-        pager = findViewById(R.id.pager);
 
         // 핸들러 설정
         ClickHandler handler = new ClickHandler();
@@ -49,15 +48,15 @@ public class MainActivity extends AppCompatActivity {
 
             switch (v.getId()) {
                 case R.id.button1:
-                    pager.setCurrentItem(0,true);
+                    pager.setCurrentItem(0, true);
                     break;
 
                 case R.id.button2:
-                    pager.setCurrentItem(1,true);
+                    pager.setCurrentItem(1, true);
                     break;
 
                 case R.id.button3:
-                    pager.setCurrentItem(2,true);
+                    pager.setCurrentItem(2, true);
                     break;
             }
         }
@@ -110,48 +109,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void destroyItem(View container, int position, Object object) {
             pager.removeView((View) object);
-        }
-    }
-
-    private  class fdsjfdsfdsf extends PagerAdapter{
-
-        private LayoutInflater inflater1;
-
-        public fdsjfdsfdsf(Context c) {
-            this.inflater1 = LayoutInflater.from(c);
-        }
-
-        @Override
-        public int getCount() {
-            return 3;
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view == object;
-        }
-
-        @Override
-        public Object instantiateItem(View container, int position) {
-
-            View v = null;
-
-            switch (position){
-                case 0:
-                    v= inflater1.inflate(R.layout.inflate_one,null,false);
-                    break;
-
-                case 1:
-                    v= inflater1.inflate(R.layout.inflate_two,null,false);
-                    break;
-
-                case 2:
-                    v= inflater1.inflate(R.layout.inflate_three,null,false);
-                    break;
-
-            }
-
-            return v;
         }
     }
 }

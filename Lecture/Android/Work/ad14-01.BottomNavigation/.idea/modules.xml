@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad14-01.BottomNavigation.iml" filepath="$PROJECT_DIR$/ad14-01.BottomNavigation.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\ad14-01.BottomNavigation\ad14-01.BottomNavigation.iml" filepath="E:\workspace\Lecture\Android\Work\ad14-01.BottomNavigation\ad14-01.BottomNavigation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\ad14-01.BottomNavigation\app\app.iml" filepath="E:\workspace\Lecture\Android\Work\ad14-01.BottomNavigation\app\app.iml" />
     </modules>
   </component>
 </project>
