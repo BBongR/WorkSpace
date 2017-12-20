@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MenuWidget</string>
+    
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="login_fail">로그인 실패</string>
+    <string name="drawer_menu_register">회원가입</string>
+    <string name="drawer_menu_login">로그인</string>
+    <string name="drawer_menu_logout">로그아웃</string>
+    <string name="drawer_menu_memedit">회원정보수정</string>
+</resources>
