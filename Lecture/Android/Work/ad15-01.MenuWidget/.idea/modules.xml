@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad15-01.MenuWidget.iml" filepath="$PROJECT_DIR$/ad15-01.MenuWidget.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\ad15-01.MenuWidget\ad15-01.MenuWidget.iml" filepath="E:\workspace\Lecture\Android\Work\ad15-01.MenuWidget\ad15-01.MenuWidget.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\ad15-01.MenuWidget\app\app.iml" filepath="E:\workspace\Lecture\Android\Work\ad15-01.MenuWidget\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/st2preference/st2preference.iml" filepath="$PROJECT_DIR$/st2preference/st2preference.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\ad15-01.MenuWidget\st2preference\st2preference.iml" filepath="E:\workspace\Lecture\Android\Work\ad15-01.MenuWidget\st2preference\st2preference.iml" />
     </modules>
   </component>
 </project>
