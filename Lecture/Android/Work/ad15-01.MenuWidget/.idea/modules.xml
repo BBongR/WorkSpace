@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ad15-01.MenuWidget.iml" filepath="$PROJECT_DIR$/ad15-01.MenuWidget.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/st2preference/st2preference.iml" filepath="$PROJECT_DIR$/st2preference/st2preference.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st3toolbar/st3toolbar.iml" filepath="$PROJECT_DIR$/st3toolbar/st3toolbar.iml" />
     </modules>
   </component>
 </project>

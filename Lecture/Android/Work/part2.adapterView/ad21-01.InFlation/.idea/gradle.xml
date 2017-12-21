@@ -9,8 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/st2preference" />
-            <option value="$PROJECT_DIR$/st3toolbar" />
+            <option value="$PROJECT_DIR$/st5inflationcustomtoast" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
