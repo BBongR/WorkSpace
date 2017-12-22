@@ -12,9 +12,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"/>
-
-    <com.example.customview.MyView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
     
+    <com.example.customview.ColorOptionsView
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:background="?android:selectableItemBackground"
+        app:titleText="Background Color"
+        app:valueColor="@android:color/holo_green_dark"/>
+    
+    <com.example.customview.ColorOptionsView
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:background="?android:selectableItemBackground"
+        app:titleText="Forground Color"
+        app:valueColor="@android:color/holo_orange_dark"/>
+
 </LinearLayout>
