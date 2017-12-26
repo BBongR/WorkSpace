@@ -12,7 +12,7 @@ public class DBConnect {
 
 		try {
 			
-			Class.forName("com.mysql.jdbc.Driver"); // driver 적재
+			Class.forName("com.mysql.jdbc.Driver"); // driver 적재 mysql 드라이버 로딩
 			conn = java.sql.DriverManager.getConnection(url, user, password); // DB 연결
 			
 		} catch (ClassNotFoundException e) {

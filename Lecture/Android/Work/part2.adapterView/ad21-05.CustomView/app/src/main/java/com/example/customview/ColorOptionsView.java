@@ -42,14 +42,6 @@ public class ColorOptionsView extends LinearLayout {
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
 
-        // CustomView 속성값 가져오기. 디자인에서
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ColorOptionsView, defStyleAttr, 0);
-        String titleText = a.getString(R.styleable.ColorOptionsView_titleText);
-        @SuppressLint("ResourceAsColor")
-        int valueColor = a.getColor(R.styleable.ColorOptionsView_valueColor, android.R.color.holo_blue_light);
-
-        a.recycle();
-
         // LinearLayout 관력 속성 설정
         setOrientation(LinearLayout.HORIZONTAL);
         setGravity(Gravity.CENTER);
@@ -57,6 +49,14 @@ public class ColorOptionsView extends LinearLayout {
         // inflation 하기
         LayoutInflater inflater = LayoutInflater.from(context);
         inflater.inflate(R.layout.view_color_options, this, true);
+
+        // CustomView 속성값 가져오기. 디자인에서
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ColorOptionsView, defStyleAttr, 0);
+        String titleText = a.getString(R.styleable.ColorOptionsView_titleText);
+        @SuppressLint("ResourceAsColor")
+        int valueColor = a.getColor(R.styleable.ColorOptionsView_valueColor, android.R.color.holo_blue_light);
+
+        a.recycle();
 
         // 0번째 자식에 값 설정
         title = (TextView) this.getChildAt(0);

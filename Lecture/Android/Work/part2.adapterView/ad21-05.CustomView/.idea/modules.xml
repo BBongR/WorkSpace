@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad21-05.CustomView.iml" filepath="$PROJECT_DIR$/ad21-05.CustomView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st2personview/st2personview.iml" filepath="$PROJECT_DIR$/st2personview/st2personview.iml" />
     </modules>
   </component>
 </project>
