@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    
+        <ImageView
+            android:id="@+id/image_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="9dp"
+            android:background="#d05202"/>
+    
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_photo"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/image_photo"
+            android:text="name"/>
+    
+        <TextView
+            android:id="@+id/text_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/text_name"
+            android:layout_below="@+id/text_name"
+            android:text="age"/>
+    
+        <ImageView
+            android:id="@+id/image_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/text_name"
+            android:layout_marginEnd="14dp"
+            android:src="@android:drawable/checkbox_off_background"/>
+        
+        <ImageView
+            android:id="@+id/image_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/sample_0"/>
+    </RelativeLayout>
+
+</merge>

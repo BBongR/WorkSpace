@@ -47,15 +47,15 @@ public class MainActivity extends AppCompatActivity {
 
             switch (v.getId()) {
                 case R.id.button1:
-                    pager.setCurrentItem(0,true);
+                    pager.setCurrentItem(0, true);
                     break;
 
                 case R.id.button2:
-                    pager.setCurrentItem(1,true);
+                    pager.setCurrentItem(1, true);
                     break;
 
                 case R.id.button3:
-                    pager.setCurrentItem(2,true);
+                    pager.setCurrentItem(2, true);
                     break;
             }
         }
