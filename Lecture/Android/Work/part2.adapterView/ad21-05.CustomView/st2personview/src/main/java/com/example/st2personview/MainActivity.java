@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
         // 위젯 찾기
         imageselect = findViewById(R.id.image_select);
-
         personview1 = findViewById(R.id.view_person);
+
         personview1.setOnImageClickListener(new PersonView.OnImageClickListener() {
             @Override
             public void onImageClick(PersonView view, PersonData person) {

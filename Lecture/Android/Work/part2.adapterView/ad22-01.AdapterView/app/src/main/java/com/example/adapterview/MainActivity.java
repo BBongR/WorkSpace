@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 //        ListView 와 ArrayAdapter 연동
 //        1. 데이터 만들기
 //        2. adapter 생성
-//        3. AutoCompleteTextView 와 adapter 연결
+//        3. ListView 와 adapter 연결
 //        4. 리스너 설정
         String[] itemsLV = {"a", "b", "c", "d", "e"};
         ArrayAdapter<String> adapterlist = new ArrayAdapter<String>(MainActivity.this

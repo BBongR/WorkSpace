@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad21-05.CustomView.iml" filepath="$PROJECT_DIR$/ad21-05.CustomView.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\part2.adapterView\ad21-05.CustomView\ad21-05.CustomView.iml" filepath="E:\workspace\Lecture\Android\Work\part2.adapterView\ad21-05.CustomView\ad21-05.CustomView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\part2.adapterView\ad21-05.CustomView\app\app.iml" filepath="E:\workspace\Lecture\Android\Work\part2.adapterView\ad21-05.CustomView\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/st2personview/st2personview.iml" filepath="$PROJECT_DIR$/st2personview/st2personview.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\part2.adapterView\ad21-05.CustomView\st2personview\st2personview.iml" filepath="E:\workspace\Lecture\Android\Work\part2.adapterView\ad21-05.CustomView\st2personview\st2personview.iml" />
     </modules>
   </component>
 </project>
