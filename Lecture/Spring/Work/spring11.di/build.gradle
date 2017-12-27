@@ -3,7 +3,7 @@
  *
  * This generated file contains a sample Java Library project to get you started.
  * For more details take a look at the Java Libraries chapter in the Gradle
- * user guide available at https://docs.gradle.org/4.3/userguide/java_library_plugin.html
+ * user guide available at https://docs.gradle.org/3.5/userguide/java_library_plugin.html
  */
 
 // Apply the java-library plugin to add support for Java Library
@@ -17,13 +17,19 @@ repositories {
 }
 
 dependencies {
-    // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api 'org.apache.commons:commons-math3:3.6.1'
 
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:23.0'
-
+// spring framework 라이브러리 
+    compile group: "org.springframework", name: "spring-core"             , version: "4.1.9.RELEASE"    
+    compile group: "org.springframework", name: "spring-beans"            , version: "4.1.9.RELEASE"
+    compile group: "org.springframework", name: "spring-context"          , version: "4.1.9.RELEASE"
+    compile group: "org.springframework", name: "spring-webmvc"           , version: "4.1.9.RELEASE"
+    compile group: "org.springframework", name: "spring-jdbc"             , version: "4.1.9.RELEASE"
+    compile group: "org.springframework", name: "spring-tx"               , version: "4.1.9.RELEASE"
+    compile group: "org.springframework", name: "spring-aop"              , version: "4.1.9.RELEASE"
+    runtime group: "org.springframework", name: "spring-aspects"          , version: "4.1.9.RELEASE"
+    
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+    
 }
 
