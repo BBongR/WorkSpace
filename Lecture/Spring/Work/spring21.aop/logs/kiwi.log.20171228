@@ -1,0 +1,30 @@
+main> [2017-12-28 11:41:41] [ClassPathXmlApplicationContext] [514] [INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5af97850: startup date [Thu Dec 28 11:41:41 KST 2017]; root of context hierarchy 
+main> [2017-12-28 11:41:41] [XmlBeanDefinitionReader] [317] [INFO] Loading XML bean definitions from class path resource [aop.xml] 
+main> [2017-12-28 11:41:52] [ClassPathXmlApplicationContext] [514] [INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5af97850: startup date [Thu Dec 28 11:41:52 KST 2017]; root of context hierarchy 
+main> [2017-12-28 11:41:52] [XmlBeanDefinitionReader] [317] [INFO] Loading XML bean definitions from class path resource [aop.xml] 
+main> [2017-12-28 11:44:30] [ClassPathXmlApplicationContext] [514] [INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5af97850: startup date [Thu Dec 28 11:44:30 KST 2017]; root of context hierarchy 
+main> [2017-12-28 11:44:30] [XmlBeanDefinitionReader] [317] [INFO] Loading XML bean definitions from class path resource [aop.xml] 
+main> [2017-12-28 11:50:06] [ClassPathXmlApplicationContext] [514] [INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1198b989: startup date [Thu Dec 28 11:50:06 KST 2017]; root of context hierarchy 
+main> [2017-12-28 11:50:06] [XmlBeanDefinitionReader] [317] [INFO] Loading XML bean definitions from class path resource [aop.xml] 
+main> [2017-12-28 11:50:06] [AutowiredAnnotationBeanPostProcessor] [153] [INFO] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+main> [2017-12-28 11:50:06] [RequestMappingHandlerAdapter] [517] [INFO] Looking for @ControllerAdvice: org.springframework.context.support.ClassPathXmlApplicationContext@1198b989: startup date [Thu Dec 28 11:50:06 KST 2017]; root of context hierarchy 
+main> [2017-12-28 11:50:06] [RequestMappingHandlerAdapter] [517] [INFO] Looking for @ControllerAdvice: org.springframework.context.support.ClassPathXmlApplicationContext@1198b989: startup date [Thu Dec 28 11:50:06 KST 2017]; root of context hierarchy 
+main> [2017-12-28 11:50:06] [DaoProduct] [18] [DEBUG] ############### getProduct ############### 
+main> [2017-12-28 11:50:06] [DaoProduct] [19] [DEBUG] ModelProduct [name=bbb, price=1000] 
+main> [2017-12-28 11:50:06] [DaoProduct] [20] [DEBUG] ############### getProduct ############### 
+main> [2017-12-28 12:12:51] [ClassPathXmlApplicationContext] [514] [INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1198b989: startup date [Thu Dec 28 12:12:51 KST 2017]; root of context hierarchy 
+main> [2017-12-28 12:12:51] [XmlBeanDefinitionReader] [317] [INFO] Loading XML bean definitions from class path resource [aop.xml] 
+main> [2017-12-28 12:12:51] [AutowiredAnnotationBeanPostProcessor] [153] [INFO] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+main> [2017-12-28 12:12:51] [RequestMappingHandlerAdapter] [517] [INFO] Looking for @ControllerAdvice: org.springframework.context.support.ClassPathXmlApplicationContext@1198b989: startup date [Thu Dec 28 12:12:51 KST 2017]; root of context hierarchy 
+main> [2017-12-28 12:12:52] [RequestMappingHandlerAdapter] [517] [INFO] Looking for @ControllerAdvice: org.springframework.context.support.ClassPathXmlApplicationContext@1198b989: startup date [Thu Dec 28 12:12:51 KST 2017]; root of context hierarchy 
+main> [2017-12-28 12:12:52] [DaoProduct] [18] [DEBUG] ############### getProduct ############### 
+main> [2017-12-28 12:12:52] [DaoProduct] [19] [DEBUG] ModelProduct [name=bbb, price=1000] 
+main> [2017-12-28 12:12:52] [DaoProduct] [20] [DEBUG] ############### getProduct ############### 
+main> [2017-12-28 12:13:31] [ClassPathXmlApplicationContext] [514] [INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1198b989: startup date [Thu Dec 28 12:13:31 KST 2017]; root of context hierarchy 
+main> [2017-12-28 12:13:31] [XmlBeanDefinitionReader] [317] [INFO] Loading XML bean definitions from class path resource [aop.xml] 
+main> [2017-12-28 12:13:31] [AutowiredAnnotationBeanPostProcessor] [153] [INFO] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring 
+main> [2017-12-28 12:13:32] [RequestMappingHandlerAdapter] [517] [INFO] Looking for @ControllerAdvice: org.springframework.context.support.ClassPathXmlApplicationContext@1198b989: startup date [Thu Dec 28 12:13:31 KST 2017]; root of context hierarchy 
+main> [2017-12-28 12:13:32] [RequestMappingHandlerAdapter] [517] [INFO] Looking for @ControllerAdvice: org.springframework.context.support.ClassPathXmlApplicationContext@1198b989: startup date [Thu Dec 28 12:13:31 KST 2017]; root of context hierarchy 
+main> [2017-12-28 12:13:32] [DaoProduct] [18] [DEBUG] ############### getProduct ############### 
+main> [2017-12-28 12:13:32] [DaoProduct] [19] [DEBUG] ModelProduct [name=bbb, price=1000] 
+main> [2017-12-28 12:13:32] [DaoProduct] [20] [DEBUG] ############### getProduct ############### 
