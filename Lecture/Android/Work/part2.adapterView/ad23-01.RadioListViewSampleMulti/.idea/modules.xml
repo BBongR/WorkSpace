@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad23-01.RadioListViewSampleMulti.iml" filepath="$PROJECT_DIR$/ad23-01.RadioListViewSampleMulti.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\part2.adapterView\ad23-01.RadioListViewSampleMulti\ad23-01.RadioListViewSampleMulti.iml" filepath="E:\workspace\Lecture\Android\Work\part2.adapterView\ad23-01.RadioListViewSampleMulti\ad23-01.RadioListViewSampleMulti.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\part2.adapterView\ad23-01.RadioListViewSampleMulti\app\app.iml" filepath="E:\workspace\Lecture\Android\Work\part2.adapterView\ad23-01.RadioListViewSampleMulti\app\app.iml" />
     </modules>
   </component>
 </project>
