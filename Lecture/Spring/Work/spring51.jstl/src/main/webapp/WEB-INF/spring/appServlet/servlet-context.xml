@@ -42,7 +42,5 @@
     <!-- base-package 속성에 자동 스캔할 패키지 경로를 입력                             -->
     <!-- 복수의 패키지를 사용하고 싶은 경우 <context:component-scan> 태그를 복수개 작성  -->
     <context:component-scan base-package="com.spring51.jstl" />
-    
- 
 
 </beans:beans>

@@ -8,12 +8,11 @@
  <title>JSTL 변수 선언</title>
 </head>
 <body>
- <h3>JSTL 변수 선언 >> jstl01 </h3>
-
+ <h3>JSTL 변수 선언 >> jstl02 MVC </h3>
  <c:set var="num1" value="7"/>
  <c:set var="num2" value="9"/>
  <c:set var="result" value="${num1*num2}"/>
-
- <p>num1=${num1} 과 num2=${num2} 의 곱은 ${result}</p>
+ <p>num1 ${num1} 과 num2 ${num2} 의 곱은 ${result}</p>
+ <p>num1 ${num1} 과 num2 ${num2} 의 곱은 ${num1*num2}</p>
 </body>
 </html>
