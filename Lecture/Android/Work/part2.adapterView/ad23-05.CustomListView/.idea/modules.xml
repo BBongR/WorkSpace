@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad23-05.CustomListView.iml" filepath="$PROJECT_DIR$/ad23-05.CustomListView.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\part2.adapterView\ad23-05.CustomListView\ad23-05.CustomListView.iml" filepath="E:\workspace\Lecture\Android\Work\part2.adapterView\ad23-05.CustomListView\ad23-05.CustomListView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\part2.adapterView\ad23-05.CustomListView\app\app.iml" filepath="E:\workspace\Lecture\Android\Work\part2.adapterView\ad23-05.CustomListView\app\app.iml" />
     </modules>
   </component>
 </project>
