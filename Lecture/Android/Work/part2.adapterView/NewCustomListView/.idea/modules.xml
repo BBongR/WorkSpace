@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ad23-05.CustomListView.iml" filepath="$PROJECT_DIR$/ad23-05.CustomListView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewCustomListView.iml" filepath="$PROJECT_DIR$/NewCustomListView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

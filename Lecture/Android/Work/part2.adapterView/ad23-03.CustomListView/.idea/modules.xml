@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ad23-03.CustomListView.iml" filepath="$PROJECT_DIR$/ad23-03.CustomListView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st1studentlistview/st1studentlistview.iml" filepath="$PROJECT_DIR$/st1studentlistview/st1studentlistview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st3checkablelistview/st3checkablelistview.iml" filepath="$PROJECT_DIR$/st3checkablelistview/st3checkablelistview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st5paginglistview/st5paginglistview.iml" filepath="$PROJECT_DIR$/st5paginglistview/st5paginglistview.iml" />
+    </modules>
+  </component>
+</project>
