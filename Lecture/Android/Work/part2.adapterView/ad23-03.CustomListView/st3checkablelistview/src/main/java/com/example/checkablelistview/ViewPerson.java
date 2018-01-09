@@ -47,7 +47,7 @@ public class ViewPerson extends RelativeLayout  {
         // 없음.
 
         // 커스텀뷰 디자인 파일 inflation 하기.
-        // inflation이란 xml 을 자바 인스턴스로 바꾸는 것.
+        // inflation 이란 xml 을 자바 인스턴스로 바꾸는 것.
         // res/layout/view_person.xml
         LayoutInflater.from( context )
                       .inflate(R.layout.view_person, this,true );
@@ -61,7 +61,6 @@ public class ViewPerson extends RelativeLayout  {
         imageCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 checkedListener.onClick(ViewPerson.this, person);
             }
         });
@@ -104,7 +103,7 @@ public class ViewPerson extends RelativeLayout  {
         imagePhoto.setImageDrawable( person.getPhoto() );
         textName  .setText( person.getName() );
         textAge   .setText( person.getAge() + "" );
-        this.setChecked(  person.isCheck()  );
+        this.setChecked   ( person.isCheck()  );
     }
 
 }

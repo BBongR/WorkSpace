@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
         // 10. ListView 와 adapter 연결
         listView3.setAdapter(adapter);
+
+
     }
 
     // 8-3

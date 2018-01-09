@@ -19,16 +19,19 @@ import java.util.List;
 public class AdapterPerson extends ArrayAdapter<ModelPerson>  {
     private List<ModelPerson> list = null;
 
+    private Context context;
+
     public AdapterPerson(@NonNull Context context, int resource, @NonNull List<ModelPerson> objects) {
         super(context, resource, objects);
         list = objects;
+        this.context = context;
     }
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         return getViewWidget(position,  convertView, parent);
-        //return getViewPerson(position,  convertView, parent);
+//        return getViewPerson(position,  convertView, parent);
     }
 
     class ViewHolderWidget {
@@ -47,10 +50,9 @@ public class AdapterPerson extends ArrayAdapter<ModelPerson>  {
 
         if( rowView == null ){
             // 커스텀뷰 디자인 파일 inflation 하기.
-            // inflation이란 xml 을 자바 인스턴스로 바꾸는 것.
+            // inflation 이란 xml 을 자바 인스턴스로 바꾸는 것.
             // res/layout/view_person.xml
-            rowView = LayoutInflater.from( getContext() )
-                          .inflate(R.layout.view_person, null,false );
+            rowView = new ViewPerson(context, null, 0);
 
             viewHolder = new ViewHolderWidget();
             viewHolder.textName    = rowView.findViewById(R.id.text_name  );

@@ -8,10 +8,10 @@ import android.graphics.drawable.Drawable;
 
 public class ModelPerson {
 
-    private Drawable image_photo = null; // ImageView
-    private String   text_name   = "";    // TextView
+    private Drawable image_photo = null;   // ImageView
+    private String   text_name   = "";     // TextView
     private String   text_age    = "";     // TextView
-    private Boolean  image_check = null; // CheckBox
+    private boolean  image_check = false;  // CheckBox
 
     public Drawable getImage_photo() {
         return image_photo;

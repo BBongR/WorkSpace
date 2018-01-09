@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.multitypelistview.MainActivity">
+
+    <com.example.administrator.multitypelistview.ViewActor
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.administrator.multitypelistview.ViewActor>
+
+    <com.example.administrator.multitypelistview.ViewComment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.administrator.multitypelistview.ViewComment>
+
+    <com.example.administrator.multitypelistview.ViewDrama
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.administrator.multitypelistview.ViewDrama>
+
+    <com.example.administrator.multitypelistview.ViewMovie
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.administrator.multitypelistview.ViewMovie>
+
+</RelativeLayout>
