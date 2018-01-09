@@ -40,8 +40,7 @@ public class AdapterItem extends ArrayAdapter<ModelItem> {
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View itemLayout = LayoutInflater.from( context )
-                .inflate(R.layout.customview_item, parent, false );
+        View itemLayout = LayoutInflater.from( context ).inflate(R.layout.customview_item, parent, false );
 
         ViewHolder holder = (ViewHolder) itemLayout.getTag();
 
