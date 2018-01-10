@@ -1,4 +1,4 @@
-package com.example.administrator.multitypelistview;
+package com.example.administrator.multitypelistview.model;
 
 /**
  * Created by Administrator on 2018-01-09.

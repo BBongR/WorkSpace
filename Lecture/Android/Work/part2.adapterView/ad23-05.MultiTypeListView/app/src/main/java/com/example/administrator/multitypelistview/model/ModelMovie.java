@@ -1,4 +1,4 @@
-package com.example.administrator.multitypelistview;
+package com.example.administrator.multitypelistview.model;
 
 import android.graphics.drawable.Drawable;
 

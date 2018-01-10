@@ -1,4 +1,4 @@
-package com.example.administrator.multitypelistview;
+package com.example.administrator.multitypelistview.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,12 +8,16 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.administrator.multitypelistview.R;
+import com.example.administrator.multitypelistview.model.ModelActor;
+
 /**
  * Created by Administrator on 2018-01-09.
  */
 
 public class ViewActor extends RelativeLayout {
 
+    private int       type = 0;
     private ImageView imagePhoto;
     private TextView  textName;
     private TextView  textAge;

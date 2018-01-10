@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     // 8-4
     private int[] images = {
-            R.drawable.sample_0
+              R.drawable.sample_0
             , R.drawable.sample_1
             , R.drawable.sample_2
             , R.drawable.sample_3

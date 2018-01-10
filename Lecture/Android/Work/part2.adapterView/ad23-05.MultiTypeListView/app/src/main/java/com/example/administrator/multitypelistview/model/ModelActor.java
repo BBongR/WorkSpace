@@ -1,6 +1,9 @@
-package com.example.administrator.multitypelistview;
+package com.example.administrator.multitypelistview.model;
 
 import android.graphics.drawable.Drawable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2018-01-09.
@@ -12,6 +15,23 @@ public class ModelActor {
     private String   textName;
     private String   textAge;
     private String   textDescription;
+
+    // child 데이터
+    List<ModelComment> comments = new ArrayList<>();
+    List<ModelDrama>   dramas   = new ArrayList<>();
+    List<ModelMovie>   movies   = new ArrayList<>();
+
+    public List<ModelComment> getComments() {
+        return comments;
+    }
+
+    public List<ModelDrama> getDramas() {
+        return dramas;
+    }
+
+    public List<ModelMovie> getMovies() {
+        return movies;
+    }
 
     public ModelActor() {
     }

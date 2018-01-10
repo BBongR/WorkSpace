@@ -1,4 +1,4 @@
-package com.example.administrator.multitypelistview;
+package com.example.administrator.multitypelistview.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -7,12 +7,16 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.administrator.multitypelistview.R;
+import com.example.administrator.multitypelistview.model.ModelComment;
+
 /**
  * Created by Administrator on 2018-01-09.
  */
 
 public class ViewComment extends RelativeLayout {
 
+    private int      type = 1;
     private TextView textMessage;
     private TextView textWriter;
 
