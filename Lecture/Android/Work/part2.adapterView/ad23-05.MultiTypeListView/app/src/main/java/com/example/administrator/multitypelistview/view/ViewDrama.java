@@ -50,11 +50,11 @@ public class ViewDrama extends RelativeLayout {
 
     private ModelDrama drama;
 
-    public ModelDrama getActor() {
+    public ModelDrama getDrama() {
         return drama;
     }
 
-    public void setActor(ModelDrama drama) {
+    public void setDrama(ModelDrama drama) {
         this.drama = drama;
 
         imagePicture.setImageDrawable( drama.getImagePicture() );

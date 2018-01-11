@@ -33,6 +33,18 @@ public class ModelActor {
         return movies;
     }
 
+    public void setComments(List<ModelComment> comments) {
+        this.comments = comments;
+    }
+
+    public void setDramas(List<ModelDrama> dramas) {
+        this.dramas = dramas;
+    }
+
+    public void setMovies(List<ModelMovie> movies) {
+        this.movies = movies;
+    }
+
     public ModelActor() {
     }
 

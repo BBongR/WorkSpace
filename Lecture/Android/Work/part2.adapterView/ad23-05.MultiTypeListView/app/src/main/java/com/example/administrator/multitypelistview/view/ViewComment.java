@@ -47,11 +47,11 @@ public class ViewComment extends RelativeLayout {
 
     private ModelComment comment;
 
-    public ModelComment getActor() {
+    public ModelComment getComment() {
         return comment;
     }
 
-    public void setActor(ModelComment comment) {
+    public void setComment(ModelComment comment) {
         this.comment = comment;
 
         textMessage.setText( comment.getTextMessage() );

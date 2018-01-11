@@ -50,11 +50,11 @@ public class ViewMovie extends RelativeLayout {
 
     private ModelMovie movie;
 
-    public ModelMovie getActor() {
+    public ModelMovie getMovie() {
         return movie;
     }
 
-    public void setActor(ModelMovie movie) {
+    public void setMovie(ModelMovie movie) {
         this.movie = movie;
 
         imagePicture.setImageDrawable( movie.getImagePicture() );
