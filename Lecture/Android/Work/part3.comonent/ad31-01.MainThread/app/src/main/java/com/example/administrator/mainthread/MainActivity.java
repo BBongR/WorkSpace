@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         // Handler
         // Thread
         // Runnable
-        handler = new Handler();
+        handler = new Handler(); // 실행 할 코드를 큐에 던진다
 
         Thread countThread = new Thread() {
             @Override
@@ -48,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
                             }
                         };
 
-                        handler.post(message);
+                        handler.post( message );
+//                        mCountTextView.post( message) ;
+//                        MainActivity.this.runOnUiThread( message );
 
                         // 1초동안 기다리기
                         Thread.sleep(1000);

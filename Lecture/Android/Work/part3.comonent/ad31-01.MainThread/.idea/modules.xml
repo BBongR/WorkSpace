@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad31-01.MainThread.iml" filepath="$PROJECT_DIR$/ad31-01.MainThread.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st3countdown/st3countdown.iml" filepath="$PROJECT_DIR$/st3countdown/st3countdown.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st5progressbar/st5progressbar.iml" filepath="$PROJECT_DIR$/st5progressbar/st5progressbar.iml" />
     </modules>
   </component>
 </project>
