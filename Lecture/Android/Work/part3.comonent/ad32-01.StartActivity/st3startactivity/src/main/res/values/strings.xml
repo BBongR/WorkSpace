@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">st3startActivityForResult</string>
+    <string name="title_activity_b">BActivity</string>
+</resources>

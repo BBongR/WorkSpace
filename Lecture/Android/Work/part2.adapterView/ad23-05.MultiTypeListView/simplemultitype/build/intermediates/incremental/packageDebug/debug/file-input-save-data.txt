@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Thu Jan 11 16:16:52 KST 2018
+0.baseType=DIRECTORY
+0.base=D\:\\workspace\\Lecture\\Android\\Work\\part2.adapterView\\ad23-05.MultiTypeListView\\simplemultitype\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1

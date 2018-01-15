@@ -1,0 +1,4 @@
+#Thu Jan 11 16:16:52 KST 2018
+base.0=D\:\\workspace\\Lecture\\Android\\Work\\part2.adapterView\\ad23-05.MultiTypeListView\\simplemultitype\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
