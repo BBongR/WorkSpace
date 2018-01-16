@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    tools:context="com.example.administrator.paintingballot.SubActivity">
+    
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="title"/>
+    
+    <ImageView
+        android:id="@+id/imgSub"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_columnSpan="2"
+        android:layout_gravity="center"/>
+    
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+    
+    <RatingBar
+        android:id="@+id/rBar1"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+    
+    <RatingBar
+        android:id="@+id/rBar2"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+    
+    <RatingBar
+        android:id="@+id/rBar3"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+    
+    <RatingBar
+        android:id="@+id/rBar4"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+    
+    <RatingBar
+        android:id="@+id/rBar5"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+    
+    <RatingBar
+        android:id="@+id/rBar6"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+    
+    <RatingBar
+        android:id="@+id/rBar7"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    
+    <TextView
+        android:id="@+id/tv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+    
+    <RatingBar
+        android:id="@+id/rBar8"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    
+    <TextView
+        android:id="@+id/tv9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+    
+    <RatingBar
+        android:id="@+id/rBar9"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="돌아가기"
+        android:layout_columnSpan="2"/>
+</GridLayout>

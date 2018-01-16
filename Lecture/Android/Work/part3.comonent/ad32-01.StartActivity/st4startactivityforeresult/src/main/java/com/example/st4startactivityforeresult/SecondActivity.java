@@ -18,10 +18,6 @@ public class SecondActivity extends AppCompatActivity {
 
         btnBack = findViewById(R.id.btnBack);
 
-//        StringBuilder sb = new StringBuilder();
-//        sb.append("p1: " + p1);
-//        sb.append("\n");
-//        sb.append("p2: " + p2);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

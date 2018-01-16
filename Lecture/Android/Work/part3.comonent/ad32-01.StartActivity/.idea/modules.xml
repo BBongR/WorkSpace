@@ -5,7 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/ad32-01.StartActivity.iml" filepath="$PROJECT_DIR$/ad32-01.StartActivity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/st2intro/st2intro.iml" filepath="$PROJECT_DIR$/st2intro/st2intro.iml" />
-      <module fileurl="file://$PROJECT_DIR$/st3startactivity/st3startactivityforresult.iml" filepath="$PROJECT_DIR$/st3startactivity/st3startactivityforresult.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st3startactivity/st3startactivity.iml" filepath="$PROJECT_DIR$/st3startactivity/st3startactivity.iml" />
+      <module fileurl="file://D:\workspace\Lecture\Android\Work\part3.comonent\ad32-01.StartActivity\st3startactivity\st3startactivityforresult.iml" filepath="D:\workspace\Lecture\Android\Work\part3.comonent\ad32-01.StartActivity\st3startactivity\st3startactivityforresult.iml" />
       <module fileurl="file://$PROJECT_DIR$/st4startactivityforeresult/st4startactivityforeresult.iml" filepath="$PROJECT_DIR$/st4startactivityforeresult/st4startactivityforeresult.iml" />
     </modules>
   </component>
