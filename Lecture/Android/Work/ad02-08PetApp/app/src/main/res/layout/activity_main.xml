@@ -76,13 +76,13 @@
                     android:layout_weight="1"
                     android:text="선택 완료"
                     android:visibility="gone"/>
-    
+
                 <ImageView
                     android:id="@+id/img1dog"
                     android:layout_width="350dp"
                     android:layout_height="350dp"
                     android:visibility="gone"
-                    app:srcCompat="@drawable/asd"/>
+                    app:srcCompat="@drawable/asd" />
     
                 <ImageView
                     android:id="@+id/img3rabbit"

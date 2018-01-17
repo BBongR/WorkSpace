@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad02-02.SendData.iml" filepath="$PROJECT_DIR$/ad02-02.SendData.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\ad02-02.SendData\ad02-02.SendData.iml" filepath="E:\workspace\Lecture\Android\Work\ad02-02.SendData\ad02-02.SendData.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\ad02-02.SendData\app\app.iml" filepath="E:\workspace\Lecture\Android\Work\ad02-02.SendData\app\app.iml" />
     </modules>
   </component>
 </project>

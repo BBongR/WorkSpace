@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad02-04.EventListener.iml" filepath="$PROJECT_DIR$/ad02-04.EventListener.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\ad02-04.EventListener\ad02-04.EventListener.iml" filepath="E:\workspace\Lecture\Android\Work\ad02-04.EventListener\ad02-04.EventListener.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\workspace\Lecture\Android\Work\ad02-04.EventListener\app\app.iml" filepath="E:\workspace\Lecture\Android\Work\ad02-04.EventListener\app\app.iml" />
     </modules>
   </component>
 </project>
