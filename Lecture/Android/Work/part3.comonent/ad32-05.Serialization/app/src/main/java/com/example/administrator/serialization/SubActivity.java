@@ -34,5 +34,17 @@ public class SubActivity extends AppCompatActivity {
         if (s1 != null) {
             textView1.setText(textView1.getText() + s1.toString());
         }
+
+        ModelParcel p1 = i.getParcelableExtra("parcelable");
+        if (p1 != null) {
+            textView1.setText(textView1.getText() + p1.toString());
+        }
+
+        Bundle bundle = i.getBundleExtra("bundle");
+        if (bundle != null) {
+            int idata = bundle.getInt("idata", 0);
+            String sdata = bundle.getString("sdata", "");
+            textView1.setText(textView1.getText() + "" + idata + sdata);
+        }
     }
 }

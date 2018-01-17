@@ -55,10 +55,18 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.btn4:
                     // parcelable 을 이용한 데이터 전달
+                    ModelParcel modelParcel = new ModelParcel();
+                    modelParcel.setIdata(20);
+                    modelParcel.setSdata("parcelable");
+                    i.putExtra("parcelable", modelParcel);
                     break;
 
                 case R.id.btn5:
                     // bundle 을 이용한 데이터 전달
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("idata", 30);
+                    bundle.putString("sdata", "bundle data");
+                    i.putExtra("bundle", bundle);
                     break;
             }
             startActivity(i);
