@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ad33-01.Fragment.iml" filepath="$PROJECT_DIR$/ad33-01.Fragment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st1FragmentInDesign/st1FragmentInDesign.iml" filepath="$PROJECT_DIR$/st1FragmentInDesign/st1FragmentInDesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st3FragmentTransaction/st3FragmentTransaction.iml" filepath="$PROJECT_DIR$/st3FragmentTransaction/st3FragmentTransaction.iml" />
+    </modules>
+  </component>
+</project>
