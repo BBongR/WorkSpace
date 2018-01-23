@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/st1FragmentInDesign" />
             <option value="$PROJECT_DIR$/st3FragmentTransaction" />
+            <option value="$PROJECT_DIR$/st5BackStack" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

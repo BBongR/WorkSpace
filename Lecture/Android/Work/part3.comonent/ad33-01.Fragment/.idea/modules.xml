@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ad33-01.Fragment.iml" filepath="$PROJECT_DIR$/ad33-01.Fragment.iml" />
       <module fileurl="file://$PROJECT_DIR$/st1FragmentInDesign/st1FragmentInDesign.iml" filepath="$PROJECT_DIR$/st1FragmentInDesign/st1FragmentInDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/st3FragmentTransaction/st3FragmentTransaction.iml" filepath="$PROJECT_DIR$/st3FragmentTransaction/st3FragmentTransaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/st5BackStack/st5BackStack.iml" filepath="$PROJECT_DIR$/st5BackStack/st5BackStack.iml" />
     </modules>
   </component>
 </project>
