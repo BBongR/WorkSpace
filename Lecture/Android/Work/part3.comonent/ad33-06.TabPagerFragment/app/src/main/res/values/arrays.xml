@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="items">
+        <item>list date 0</item>
+        <item>list date 1</item>
+        <item>list date 2</item>
+        <item>list date 3</item>
+        <item>list date 4</item>
+        <item>list date 5</item>
+        <item>list date 6</item>
+        <item>list date 7</item>
+        <item>list date 8</item>
+        <item>list date 9</item>
+        <item>list date 10</item>
+        <item>list date 11</item>
+        <item>list date 12</item>
+        <item>list date 13</item>
+        <item>list date 14</item>
+        <item>list date 15</item>
+        <item>list date 16</item>
+        <item>list date 17</item>
+        <item>list date 18</item>
+        <item>list date 19</item>
+        <item>list date 20</item>
+    </string-array>
+</resources>
