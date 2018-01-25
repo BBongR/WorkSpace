@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         tablayout.addTab(tablayout.newTab().setText("Tab Three"));
         tablayout.addTab(tablayout.newTab().setIcon(android.R.drawable.ic_dialog_map));
         tablayout.setTabGravity(Gravity.FILL);
-        tablayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        tablayout.setTabMode(TabLayout.MODE_FIXED);
 
         // ViewPager 설정
         viewpager = findViewById(R.id.view_pager);

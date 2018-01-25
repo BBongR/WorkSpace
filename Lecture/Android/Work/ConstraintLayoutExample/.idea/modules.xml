@@ -3,11 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ConstraintLayoutExample.iml" filepath="$PROJECT_DIR$/ConstraintLayoutExample.iml" />
+      <module fileurl="file://D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\ConstraintLayoutExample.iml" filepath="D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\ConstraintLayoutExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/st1constraintlayout/st1constraintlayout.iml" filepath="$PROJECT_DIR$/st1constraintlayout/st1constraintlayout.iml" />
+      <module fileurl="file://D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st1constraintlayout\st1constraintlayout.iml" filepath="D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st1constraintlayout\st1constraintlayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/st2linearlayout/st2linearlayout.iml" filepath="$PROJECT_DIR$/st2linearlayout/st2linearlayout.iml" />
+      <module fileurl="file://D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st2linearlayout\st2linearlayout.iml" filepath="D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st2linearlayout\st2linearlayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/st3relativelayout/st3relativelayout.iml" filepath="$PROJECT_DIR$/st3relativelayout/st3relativelayout.iml" />
+      <module fileurl="file://D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st3relativelayout\st3relativelayout.iml" filepath="D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st3relativelayout\st3relativelayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/st4.gridlayout/st4.gridlayout.iml" filepath="$PROJECT_DIR$/st4.gridlayout/st4.gridlayout.iml" />
+      <module fileurl="file://D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st4.gridlayout\st4.gridlayout.iml" filepath="D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st4.gridlayout\st4.gridlayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/st5framelayout/st5framelayout.iml" filepath="$PROJECT_DIR$/st5framelayout/st5framelayout.iml" />
+      <module fileurl="file://D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st5framelayout\st5framelayout.iml" filepath="D:\workspace\Lecture\Android\Work\ConstraintLayoutExample\st5framelayout\st5framelayout.iml" />
     </modules>
   </component>
 </project>
