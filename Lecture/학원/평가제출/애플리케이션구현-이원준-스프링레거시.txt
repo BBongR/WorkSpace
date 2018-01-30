@@ -1,0 +1,25 @@
+1. 스프링 레거시 프로젝트 생성
+2. 파일이름 MVC 선택
+3. 패키지 이름 com.exam09.wonjun 생성
+4. 빌드.그레이들 복사 하고 프로젝트선택하고 컨피그에 sts
+5. 그레이들 sts에서 리플레쉬 올
+6. 컨피그에서 애드 그레이들 네쳐
+7. 그레이들에서 리플레쉬 그레이들
+8. servlet-context.xml 붙여넣기
+9. Configuration.xml 붙여넣기
+10. log4j 붙여넣기
+11. web.xml 붙여넣기
+12. servlet-context.xml 에 base-package="com.exam09.wonjun"
+     value="jdbc:mysql://localhost:3306/springboard?useUnicode=true&amp;characterEncoding=utf8" />
+     value="tester1" />
+     value="1234"    />
+
+13. Configuration.xml
+     <package name="com.exam09.wonjun.model" />
+
+14. 저장하고 클린하고 디버그애즈에서 서버실행
+15. view 폴더에 jsp파일 복사 붙여넣기
+16. 저장하고 클린하고 디버그애즈에서 서버실행
+17. src/main/java 폴더 안에 있는 패키지 안에다가 com.exam09.wonjun.controller 패키지 만들기
+18. 위에서 만든 패키지 안에 홈컨트롤러 옮기고 복사해서 PhoneController 만들기
+19. PhoneController 변경
