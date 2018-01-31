@@ -1,95 +1,86 @@
 package com.spring61.rest.dao;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.Repository;
 
-import com.spring61.rest.inf.IUser;
-import com.spring61.rest.model.ModelUser;
+import com.spring61.rest.inf.*;
+import com.spring61.rest.model.*;
+
+import java.util.*;
 
 @Repository("daouser")
 public class DaoUser implements IUser {
 
     @Autowired
     @Qualifier("sqlSession")
-    private SqlSession session;
-
+    private SqlSession session;    
+    
     @Override
-    public int insertUser(ModelUser user) throws Exception {
-        System.out.println("DaoUser : " + user.toString());
-        int rs = -1;
-        rs = session.insert("mapper.mapperUser.insertUser", user);
-        return rs;
+    public int insertUser(ModelUser user) {
+        return session.insert("mapper.mapperUser.insertUser", user);   
     }
 
     @Override
-    public List<ModelUser> login(ModelUser user) throws Exception {
-        System.out.println("DaoUser : " + user);
-        List<ModelUser> rs = null;
-        rs = session.selectList("mapper.mapperUser.login", user);
-        return rs;
+    public ModelUser login(String userid, String passwd) {
+        Map<String, Object> map = new HashMap<>(); 
+        map.put("userid"  ,    userid);
+        map.put("passwd",      passwd);
+        return session.selectOne("mapper.mapperUser.login", map);
     }
 
     @Override
-    public int logout(String user) throws Exception {
+    public int logout(String userid) {
+        // TODO Auto-generated method stub
         return 0;
     }
 
     @Override
-    public int updateUserInfo(ModelUser updateValue, ModelUser searchValue) throws Exception {
-        int rs = -1;
-        Map<String, ModelUser> map = new HashMap<>();
-        map.put("searchValue", searchValue);
-        map.put("updateValue", updateValue);
-        rs = session.update("mapper.mapperUser.updateUserInfo", map);
-        return rs;
-    }
-
-    @Override
-    public int updatePasswd(String newPasswd, String currentPasswd, String userid) throws Exception {
-        int rs = -1;
-        Map<String, String> map = new HashMap<>();
-        map.put("newPasswd", newPasswd);
-        map.put("currentPasswd", currentPasswd);
-        map.put("userid", userid);
+    public int updateUserInfo(ModelUser setValue, ModelUser whereValue) {
         
+        Map<String, ModelUser> map = new HashMap<String, ModelUser>(); 
+        map.put("setValue"  ,      setValue);
+        map.put("whereValue",      whereValue);
+
+        return session.update("mapper.mapperUser.updateUserInfo", map);
+    }
+
+    @Override
+    public int updatePasswd(String userid, String currentPasswd, String newPasswd) {
         
-        rs = session.update("mapper.mapperUser.updatePasswd", map);
-        return rs;
+        Map<String, Object> map = new HashMap<>();
+        map.put("userid"       , userid       );
+        map.put("currentPasswd", currentPasswd); 
+        map.put("newPasswd"    , newPasswd    );
+        return session.update("mapper.mapperUser.updatePasswd", map);
     }
 
     @Override
-    public int deleteUser(ModelUser user) throws Exception {
-        System.out.println("DaoUser : " + user.toString());
-        int rs = -1;
-        rs = session.delete("mapper.mapperUser.deleteUser", user);
-        return rs;
+    public int updateRetire(ModelUser user) {
+        return session.delete("mapper.mapperUser.updateRetire", user);
     }
 
     @Override
-    public List<ModelUser> selectUserOne(ModelUser user) throws Exception {
-        List<ModelUser> rs = null;
-        rs = session.selectList("mapper.mapperUser.selectUserOne", user);
-        return rs;
+    public ModelUser selectUserOne(ModelUser user) {
+        return session.selectOne("mapper.mapperUser.selectUserOne", user);
     }
 
     @Override
-    public List<ModelUser> selectUserList(ModelUser user) throws Exception {
-        List<ModelUser> rs = null;
-        rs = session.selectList("mapper.mapperUser.selectUserList", user);
-        return rs;
+    public List<ModelUser> selectUserList(ModelUser user) {
+        return session.selectList("mapper.mapperUser.selectUserList", user);
     }
 
     @Override
-    public int checkuserid(String user) throws Exception {
-        int rs = -1;
-        rs = session.selectOne("mapper.mapperUser.checkuserid", user);
-        return rs;
+    public int checkuserid(String userid) {
+        return session.selectOne("mapper.mapperUser.checkuserid", userid);
     }
 
+    @Override
+    public int checkpassword(String id, String curpw) {
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("id", id   );
+        map.put("pw", curpw);
+        return session.selectOne("mapper.mapperUser.checkpassword", map);
+    }
+    
 }

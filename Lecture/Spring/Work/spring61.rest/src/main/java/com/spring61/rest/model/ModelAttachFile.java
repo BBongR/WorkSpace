@@ -1,126 +1,108 @@
 package com.spring61.rest.model;
 
-import java.sql.Date;
-
-import javax.print.DocFlavor.BYTE_ARRAY;
+import java.util.Date;
 
 public class ModelAttachFile {
-    
-    private Integer    attachfileno = 0;
-    private String     filename     = "";
-    private String     filetype     = "";
-    private Integer    filesize     = 0;
-    private Integer    articleno    = 0;
-    private Boolean    UseYN        = null;
-    private String     InsertUID    = "";
-    private String       InsertDT     = null;
-    private String     UpdateUID    = "";
-    private String       UpdateDT     = null;
-    private BYTE_ARRAY imageData    = null;
-    
-    // 생성자
-    public ModelAttachFile() {
-        super();
-    }
-    
-    // getter & setter
+    Integer attachfileno   ;
+    String  filenameorig   ;
+    String  filenametemp   ;
+    String  filetype       ;
+    Long    filesize       ;
+    Integer articleno      ;
+    Boolean UseYN          ; 
+    String  InsertUID      ;     
+    Date    InsertDT       ;
+    String  UpdateUID      ;     
+    Date    UpdateDT       ;
     
     public Integer getAttachfileno() {
         return attachfileno;
     }
-    
     public void setAttachfileno(Integer attachfileno) {
         this.attachfileno = attachfileno;
     }
-    
-    public String getFilename() {
-        return filename;
+    public String getFilenameorig() {
+        return filenameorig;
     }
-    
-    public void setFilename(String filename) {
-        this.filename = filename;
+    public void setFilenameorig(String filenameorig) {
+        this.filenameorig = filenameorig;
     }
-    
+    public String getFilenametemp() {
+        return filenametemp;
+    }
+    public void setFilenametemp(String filenametemp) {
+        this.filenametemp = filenametemp;
+    }
     public String getFiletype() {
         return filetype;
     }
-    
     public void setFiletype(String filetype) {
         this.filetype = filetype;
     }
-    
-    public Integer getFilesize() {
+    public Long getFilesize() {
         return filesize;
     }
-    
-    public void setFilesize(Integer filesize) {
+    public void setFilesize(Long filesize) {
         this.filesize = filesize;
     }
-    
     public Integer getArticleno() {
         return articleno;
     }
-    
     public void setArticleno(Integer articleno) {
         this.articleno = articleno;
     }
-    
     public Boolean getUseYN() {
         return UseYN;
     }
-    
     public void setUseYN(Boolean useYN) {
         UseYN = useYN;
     }
-    
     public String getInsertUID() {
         return InsertUID;
     }
-    
     public void setInsertUID(String insertUID) {
         InsertUID = insertUID;
     }
-    
-    public String getInsertDT() {
+    public Date getInsertDT() {
         return InsertDT;
     }
-    
-    public void setInsertDT(String date) {
-        InsertDT = date;
+    public void setInsertDT(Date insertDT) {
+        InsertDT = insertDT;
     }
-    
     public String getUpdateUID() {
         return UpdateUID;
     }
-    
     public void setUpdateUID(String updateUID) {
         UpdateUID = updateUID;
     }
-    
-    public String getUpdateDT() {
+    public Date getUpdateDT() {
         return UpdateDT;
     }
-    
-    public void setUpdateDT(String updateDT) {
+    public void setUpdateDT(Date updateDT) {
         UpdateDT = updateDT;
     }
-    
-    public BYTE_ARRAY getImageData() {
-        return imageData;
-    }
-    
-    public void setImageData(BYTE_ARRAY imageData) {
-        this.imageData = imageData;
-    }
-
-    // toString
     @Override
     public String toString() {
-        return "Modelattachfile [attachfileno=" + attachfileno + ", filename="
-                + filename + ", filetype=" + filetype + ", filesize=" + filesize
-                + ", articleno=" + articleno + ", UseYN=" + UseYN
+        return "ModelAttachFile [attachfileno=" + attachfileno
+                + ", filenameorig=" + filenameorig + ", filenametemp="
+                + filenametemp + ", filetype=" + filetype + ", filesize="
+                + filesize + ", articleno=" + articleno + ", UseYN=" + UseYN
                 + ", InsertUID=" + InsertUID + ", InsertDT=" + InsertDT
-                + ", UpdateUID=" + UpdateUID + ", UpdateDT=" + UpdateDT
-                + ", imageData=" + imageData + "]";
+                + ", UpdateUID=" + UpdateUID + ", UpdateDT=" + UpdateDT + "]";
+    }
+    
+    public ModelAttachFile() {
+        super();
+    }
+    public ModelAttachFile(Integer attachfileno) {
+        super();
+        this.attachfileno = attachfileno;
+    }    
+    public ModelAttachFile(String filenameorig, String filetype, Long filesize, Integer articleno) {
+        super();
+        this.filenameorig = filenameorig;
+        this.filetype = filetype;
+        this.filesize = filesize;
+        this.articleno = articleno;
     }
 }

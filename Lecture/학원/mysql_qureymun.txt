@@ -1,0 +1,36 @@
+insert into tb_user
+       (user_email, user_password, user_name, user_nickname, user_phone)
+values ('aaaa', 'aaaa', 'aaaa', 'aaaa', 'aaaa');
+
+SELECT * FROM tb_user
+WHERE user_email = 'cccc'
+AND user_password = 'cccc'
+
+SELECT * FROM tb_user
+WHERE 1=1
+AND user_email = 'aaaa'
+AND user_password = 'aaaa'
+AND user_name = 'aaaa'
+AND user_nickname = 'aaaa'
+AND user_phone = 'aaaa'
+
+UPDATE tb_user
+SET user_use = 0
+WHERE user_email = 'aaaa'
+AND user_password = 'aaaa';
+
+UPDATE tb_user
+SET user_password = 'bbbb'
+, user_name = 'bbbb'
+, user_nickname = 'bbbb'
+, user_gender = 0
+, user_phone = 'bbbb'
+WHERE
+user_email = 'bbbb'
+AND user_password = 'bbbb2'
+;
+
+UPDATE tb_user
+SET user_email = 'bbbb'
+WHERE
+user_email = 'bbbb'

@@ -3,8 +3,13 @@ DROP DATABASE IF EXISTS LogsDB;
 
 CREATE database LogsDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
+-- 사용자 추가
+GRANT ALL ON LogsDB.* TO tester1@localhost IDENTIFIED BY '1234';
+FLUSH PRIVILEGES;
+
 -- 데이터베이스 변경
 USE LogsDB;
+
 CREATE TABLE LOGS
 (
     USER_ID VARCHAR(20) NOT NULL,

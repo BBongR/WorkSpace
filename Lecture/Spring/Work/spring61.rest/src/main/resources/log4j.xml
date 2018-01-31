@@ -72,7 +72,7 @@
  
     
     <!-- Application Loggers -->
-    <logger name="com.spring67.upload">
+    <logger name="com.spring61.rest">
         <level value="info" />
     </logger>
     

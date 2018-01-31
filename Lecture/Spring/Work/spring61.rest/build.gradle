@@ -21,7 +21,7 @@
  *
  */
 
-// tomcat과 cargo plugin에 대한 repository 설정입니다.
+// tomcat怨� cargo plugin�뿉 ���븳 repository �꽕�젙�엯�땲�떎.
 buildscript {
     repositories {
         jcenter()
@@ -37,13 +37,13 @@ buildscript {
 }
 
 
-// Plugin 설정, 만약에 code에 대한 static analysis가 필요한 경우에 이곳에 설정.
+// Plugin �꽕�젙, 留뚯빟�뿉 code�뿉 ���븳 static analysis媛� �븘�슂�븳 寃쎌슦�뿉 �씠怨녹뿉 �꽕�젙.
 apply plugin: "java"
 apply plugin: "idea"
 apply plugin: "groovy"
 apply plugin: "eclipse"
 //apply plugin: "application"
-apply plugin: "eclipse-wtp"  // WTP(Web Tools Platform) -> 웹 프로젝트로 인식하도록
+apply plugin: "eclipse-wtp"  // WTP(Web Tools Platform) -> �쎒 �봽濡쒖젥�듃濡� �씤�떇�븯�룄濡�
 apply plugin: "war"
 apply plugin: "com.bmuschko.tomcat"
 apply plugin: "com.bmuschko.cargo"
@@ -73,7 +73,7 @@ compileTestJava {
 
 
 [compileJava, compileTestJava]*.options.collect {options ->
-    options.encoding = "UTF-8"  // 소스 인코딩 UTF-8로 지정
+    options.encoding = "UTF-8"  // �냼�뒪 �씤肄붾뵫 UTF-8濡� 吏��젙
     options.debug = true
     options.deprecation = true
     options.compilerArgs.add "-Xlint"
@@ -87,9 +87,12 @@ compileTestJava {
 eclipse {
     wtp {
         facet {
-            facet name: "jst.web" , version: "2.5" // Servlet Spec Version 지정, 미 지정시 2.4
-            facet name: "jst.java", version: "1.8" // Java Version 지정
+            facet name: "jst.web" , version: "2.5" // Servlet Spec Version 吏��젙, 誘� 吏��젙�떆 2.4
+            facet name: "jst.java", version: "1.8" // Java Version 吏��젙
         }
+        component {
+	       contextPath = '/'
+	    }
     }
     
     classpath {
@@ -102,7 +105,7 @@ eclipse {
 
 
 
-// 메이븐 Central 저장소 사용
+// 硫붿씠釉� Central ���옣�냼 �궗�슜
 repositories {
     // Use "jcenter" for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
@@ -120,11 +123,11 @@ configurations {
     providedRuntime
     providedCompile
 
-    // logback(slf4j)를 사용하기 때문에 모든 의존성에서 commons-logging는 제외
+    // logback(slf4j)瑜� �궗�슜�븯湲� �븣臾몄뿉 紐⑤뱺 �쓽議댁꽦�뿉�꽌 commons-logging�뒗 �젣�쇅
     //compile.exclude group: "commons-logging", module: "commons-logging"
 }
 
-// dependency 버전 정보
+// dependency 踰꾩쟾 �젙蹂�
 def versions = [
       spring        : "4.1.9.RELEASE"
     , security      : "3.2.8.RELEASE"
@@ -146,7 +149,7 @@ def versions = [
     //, logback       : "1.0.13"
 ]
 
-// 의존성 설정
+// �쓽議댁꽦 �꽕�젙
 dependencies {
 
     compile fileTree(dir: "lib", include: ["*.jar"])
@@ -161,7 +164,7 @@ dependencies {
     compile group: "commons-collections" , name: "commons-collections" , version: "3.2"
     compile group: "commons-pool"        , name: "commons-pool"        , version: "1.6"
  
-    // log 라이브러리
+    // log �씪�씠釉뚮윭由�
     compile group: "org.slf4j"              , name: "slf4j-api"      , version: "${versions.slf4j}"
     runtime group: "org.slf4j"              , name: "slf4j-log4j12"  , version: "${versions.slf4j}"
     runtime group: "org.slf4j"              , name: "jcl-over-slf4j" , version: "${versions.slf4j}"
@@ -171,7 +174,7 @@ dependencies {
     compile group: "com.googlecode.log4jdbc", name: "log4jdbc", version: "1.2"
 
 
-    // spring framework 라이브러리 
+    // spring framework �씪�씠釉뚮윭由� 
     compile group: "org.springframework", name: "spring-core"             , version: "${versions.spring}"    
     compile group: "org.springframework", name: "spring-beans"            , version: "${versions.spring}"
     compile group: "org.springframework", name: "spring-context"          , version: "${versions.spring}"
@@ -197,16 +200,16 @@ dependencies {
     compile group: "org.springframework.webflow" , name: "spring-js"     , version: "${versions.webflow}"
     compile group: "org.springframework.webflow" , name: "spring-webflow", version: "${versions.webflow}"
     
-    // aspectj 라이브러리: AOP와 연관이 있는 라이브러리
+    // aspectj �씪�씠釉뚮윭由�: AOP�� �뿰愿��씠 �엳�뒗 �씪�씠釉뚮윭由�
     compile group: "org.aspectj" , name: "aspectjrt"     , version: "${versions.aspectj}"
     compile group: "org.aspectj" , name: "aspectjweaver" , version: "${versions.aspectj}"
     compile group: "org.aspectj" , name: "aspectjtools"  , version: "${versions.aspectj}"
 
-    // mybatis 라이브러리
+    // mybatis �씪�씠釉뚮윭由�
     compile group: "org.mybatis", name: "mybatis"       , version: "3.2.8"  
     compile group: "org.mybatis", name: "mybatis-spring", version: "1.2.2" 
         
-    // mysql jdbc 드라이버
+    // mysql jdbc �뱶�씪�씠踰�
     compile group: "mysql", name: "mysql-connector-java", version: "5.1.34"
 
     // 
@@ -214,7 +217,7 @@ dependencies {
     // compile group: "org.apache.logging.log4j"  , name: "log4j-core"   , version: "2.1"  
 
    
-    // 파일업로드 할 때 사용.
+    // �뙆�씪�뾽濡쒕뱶 �븷 �븣 �궗�슜.
     compile group: "commons-fileupload" , name: "commons-fileupload" , version: "1.2.1"
     compile group: "commons-io"         , name: "commons-io"         , version: "2.4"
     
@@ -224,11 +227,11 @@ dependencies {
 
 
        
-    // JSR 330 JAR 를 포함하기 위한 라이브러리. @Inject, @Named 어노테이션 사용 가능
+    // JSR 330 JAR 瑜� �룷�븿�븯湲� �쐞�븳 �씪�씠釉뚮윭由�. @Inject, @Named �뼱�끂�뀒�씠�뀡 �궗�슜 媛��뒫
     compile group: "javax.inject"      , name: "javax.inject"    , version: "1"
     compile group: "javax.persistence" , name: "persistence-api" , version: "1.0.2"
        
-    // JSP Tag 를 위한 라이브러리. 
+    // JSP Tag 瑜� �쐞�븳 �씪�씠釉뚮윭由�. 
     compile group: "javax.servlet"          , name: "jstl"     , version: "${versions.jstl}"
     compile group: "javax.servlet.jsp.jstl" , name: "jstl-api" , version: "${versions.jstl}"        
     compile group: "taglibs"                , name: "standard" , version: "1.1.2"
@@ -247,26 +250,24 @@ dependencies {
     //compile group: "org.hibernate"                  , name: "hibernate-entitymanager" , version: "${versions.hibernate}"    
     //compile group: "org.hibernate.javax.persistence", name: "hibernate-jpa-2.0-api"   , version: "1.0.1.Final"
    
+    
+    // @ResponseBody瑜� �씠�슜�빐 json �뜲�씠�꽣瑜� 諛섑솚�븯湲� �쐞�븳 �씪�씠釉뚮윭由�
+    compile 'com.fasterxml.jackson.core:jackson-core:2.4.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.1.1'
+    
+    // gson : json 媛앹껜瑜� �옄諛� �씤�뒪�꽩�뒪濡� 諛붽씀�뒗 援ш� �씪�씠釉뚮윭由�
+    compile group: "com.google.code.gson", name: "gson", version: "2.8.0"
+    compile group: "org.json"            , name: "json", version: "20140107" 
+    
     // jsoup library
     //compile group: "org.jsoup", name: "jsoup", version: "1.7.3" 
     
-    // json library :: @ResponseBody를 이용해 json 데이터를 반환하기 위한 라이브러리
-    //compile group: "org.codehaus.jackson", name: "jackson-mapper-asl", version: "1.9.13"
-    //compile group: "org.json"            , name: "json"              , version: "20140107" 
-    
     // make html template
     //compile group: "org.freemarker", name: "freemarker", version: "2.3.21"   
-    
-
-    //
-    //compile group: "joda-time", name: "joda-time", version: "2.7"
 
     // java mail
     //compile group: "javax.mail", name: "mail", version: "1.4.7"
     
-    // gson
-    // https://mvnrepository.com/artifact/com.google.code.gson/gson
-    //compile group: "com.google.code.gson", name: "gson", version: "2.8.0"
 
     //
     //compile group: "com.google.android", name: "android", version: "4.1.1.4"    
@@ -278,7 +279,7 @@ dependencies {
     
     
 
-    // TDD를 위한 JUnit 라이브러리.
+    // TDD瑜� �쐞�븳 JUnit �씪�씠釉뚮윭由�.
     testCompile group: "junit", name: "junit", version: "${versions.junit}"
     testCompile group: "org.springframework", name: "spring-test", version: "${versions.spring}"
     testCompile group: "org.mockito", name: "mockito-core", version: "${versions.mockito}"
@@ -288,20 +289,20 @@ dependencies {
     runtime group: "javax.servlet.jsp", name: "javax.servlet.jsp-api", version: "2.3.1"  
     runtime group: "org.apache.tomcat", name: "tomcat-servlet-api", version: "${versions.tomcatVersion}" 
             
-    // tomcat plugin 설정입니다.
+    // tomcat plugin �꽕�젙�엯�땲�떎.
     tomcat group: "org.apache.tomcat.embed", name: "tomcat-embed-core", version: "${versions.tomcatVersion}"
     tomcat group: "org.apache.tomcat.embed", name: "tomcat-embed-logging-juli", version: "${versions.tomcatVersion}"
     tomcat(group: "org.apache.tomcat.embed", name: "tomcat-embed-jasper", version: "${versions.tomcatVersion}") {
         exclude group: "org.eclipse.jdt.core.compiler", module: "ecj"
     }
     
-    // cargo에 대한 설정입니다.
+    // cargo�뿉 ���븳 �꽕�젙�엯�땲�떎.
     cargo group: "org.codehaus.cargo", name: "cargo-core-uberjar", version: "${versions.cargoVersion}"
     cargo group: "org.codehaus.cargo", name: "cargo-ant"         , version: "${versions.cargoVersion}"       
 }
 
 
-// main java 소스셋의 디렉토리 추가
+// main java �냼�뒪�뀑�쓽 �뵒�젆�넗由� 異붽�
 sourceSets {
     main {
         java.srcDirs      = ["src/main/java"     ]      
@@ -316,12 +317,12 @@ clean {
     //delete sourceSets.main.java.srcDirs
 }
 
-// compileJava task에 dependency를 걸어줍니다.
+// compileJava task�뿉 dependency瑜� 嫄몄뼱以띾땲�떎.
 compileJava {
     // dependsOn taskBuild
     //dependsOn taskCopy
     
-    // compile target에 generated된 QClass들의 위치를 추가.
+    // compile target�뿉 generated�맂 QClass�뱾�쓽 �쐞移섎�� 異붽�.
     //source sourceSets.generated.java.srcDirs.iterator().next()
 }
 
@@ -336,7 +337,7 @@ idea {
 }
 
 
-// TEST 설정
+// TEST �꽕�젙
 test {
     jvmArgs = ["-ea", "-Xmx256m"]
     logging.captureStandardOutput(LogLevel.INFO)
@@ -365,7 +366,7 @@ war {
 jar {
     archiveName = "kr.co.companymake.library.jar"
 
-    // manifest.mf 만들고 속성 추가
+    // manifest.mf 留뚮뱾怨� �냽�꽦 異붽�
     manifest {    
         attributes "Implementation-Title": "Gradle Quickstart"        
         attributes "Implementation-Version": version
@@ -397,10 +398,10 @@ startScripts {
 */
  
 
-// 프로젝트 초기화
-// 1. java source directory 생성 : src/main/java, src/test/java
-// 2. resource directory 생성    : src/main/resource, src/test/resource
-// 3. web source directory 생성  : src/main/webapp, src/main/webapp/WEB-INF
+// �봽濡쒖젥�듃 珥덇린�솕
+// 1. java source directory �깮�꽦 : src/main/java, src/test/java
+// 2. resource directory �깮�꽦    : src/main/resource, src/test/resource
+// 3. web source directory �깮�꽦  : src/main/webapp, src/main/webapp/WEB-INF
 task initProject(description: "initialize project") {
 
     sourceSets*.java.srcDirs*.each { it.mkdirs() }
@@ -489,12 +490,12 @@ tomcat {
     }
 }
 
-// tomcatRun을 실행시키기 위해서 war에 대한 dependency를 주입합니다.
+// tomcatRun�쓣 �떎�뻾�떆�궎湲� �쐞�빐�꽌 war�뿉 ���븳 dependency瑜� 二쇱엯�빀�땲�떎.
 tomcatRun {    
     URIEncoding = "utf-8"
     contextPath = "/"   
      
-    //configFile = file("src/main/webapp/META-INF/context.xml") // 기본값 src/main/webapp/META-INF/context.xml    
+    //configFile = file("src/main/webapp/META-INF/context.xml") // 湲곕낯媛� src/main/webapp/META-INF/context.xml    
     dependsOn war
 }
 
@@ -516,12 +517,12 @@ cargo {
 
     deployable {
     
-        // context = 'app' 인 경우 --> http://localhost:9090/app 로 접속 가능
-        // context = ''    인 경우 --> http://localhost:9090/${war.archiveName} 로 접속가능
+        // context = 'app' �씤 寃쎌슦 --> http://localhost:9090/app 濡� �젒�냽 媛��뒫
+        // context = ''    �씤 寃쎌슦 --> http://localhost:9090/${war.archiveName} 濡� �젒�냽媛��뒫
         context = project.name
     }   
 
-    // remoteDeploy 되는 target의 tomcat 정보
+    // remoteDeploy �릺�뒗 target�쓽 tomcat �젙蹂�
     remote {
         hostname = "cloud.internal.it"
         username = "superuser"

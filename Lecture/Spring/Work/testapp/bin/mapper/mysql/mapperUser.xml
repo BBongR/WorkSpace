@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.mysql.mapperUser">
+
+	<insert id="insertUser" parameterType="ModelUser">
+		insert into tb_user(   user_email ,    user_password ,    user_name ,    user_nickname,    user_gender,    user_phone  )
+		             values( #{user_email} , #{user_password} , #{user_name} , #{user_nickname}, #{user_gender} ,#{user_phone} )
+	</insert>
+
+	<select id="login" parameterType="ModelUser" resultType="int">
+		select count(*) from tb_user
+		where user_use = 1
+		AND user_email = #{user_email} AND user_password = #{user_password}
+	</select>
+
+	<select id="selectUserList" parameterType="ModelUser" resultType="ModelUser">
+		select * from tb_user
+		where 1 = 1
+		<if test=" user_email != null and user_email != '' ">
+		AND user_email = #{user_email}
+		</if>
+		<if test=" user_password != null and user_password != '' ">
+		AND user_password = #{user_password}
+		</if>
+		<if test=" user_name != null and user_name != '' ">
+		AND user_name = #{user_name}
+		</if>
+		<if test=" user_nickname != null and user_nickname != '' ">
+		AND user_nickname = #{user_nickname}
+		</if>
+		<if test=" user_gender != null and user_gender != '' ">
+		AND user_gender = #{user_gender}
+		</if>
+		<if test=" user_phone != null and user_phone != '' ">
+		AND user_phone = #{user_phone}
+		</if>
+		<if test=" user_use != null and user_use != '' ">
+		AND user_phone = #{user_phone}
+		</if>
+	</select>
+
+	<update id="updateUserUse" parameterType="ModelUser">
+		update tb_user
+		set user_use = #{user_use}
+		where user_email  = #{user_email}
+		AND user_password = #{user_password}
+	</update>
+	
+	<update id="updateUserInfo" parameterType="ModelUser">
+	update tb_user
+	set user_email = #{user_email}
+	<if test=" user_name != null and user_name != '' ">
+	, user_name = #{user_name}
+	</if>
+	<if test=" user_password != null and user_password != '' ">
+	, user_password = #{user_password}
+	</if>
+	<if test=" user_nickname != null and user_nickname != '' ">
+	, user_nickname = #{user_nickname}
+	</if>
+	<if test=" user_phone != null and user_phone != '' ">
+	, user_phone = #{user_phone}
+	</if>
+	where
+	user_email = #{user_email}
+    </update>
+	
+</mapper>
