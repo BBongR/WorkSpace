@@ -21,7 +21,7 @@ import com.spring61.rest.model.ModelPerson;
 
 @Controller
 @RequestMapping(value = "/rest") // 2.
-public class RestPersonController {
+public class RestPersonController implements IPerson {
 
 	private static final Logger logger = LoggerFactory.getLogger(RestPersonController.class);
 
@@ -29,6 +29,10 @@ public class RestPersonController {
 	DataStorePerson service;
 
 	// http://localhost:8080/rest/curtime
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#curtime(org.springframework.ui.Model)
+	 */
+	@Override
 	@RequestMapping(value = "/curtime", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody // 1. 클라이언트로 부터 넘겨 받은 json 데이터가 자바의 모델 인스턴스로 자동 변환된다
 	public long curtime(Model model) {
@@ -38,6 +42,10 @@ public class RestPersonController {
 	}
 
 	// http://localhost:8080/rest/loginperson?id=userid1&pw=password
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#loginperson(org.springframework.ui.Model, java.lang.String, java.lang.String)
+	 */
+	@Override
 	@RequestMapping(value = "/loginperson", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody // 1. 클라이언트로 부터 넘겨 받은 json 데이터가 자바의 모델 인스턴스로 자동 변환된다
 	public long loginperson(Model model, @RequestParam String id, @RequestParam String pw) {
@@ -47,6 +55,10 @@ public class RestPersonController {
 	}
 
 	// http://localhost:8080/rest//rest/selectparam?name=id1 (GET)
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#selectparam(org.springframework.ui.Model, java.lang.String)
+	 */
+	@Override
 	@RequestMapping(value = "/selectparam", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody // 1. 클라이언트로 부터 넘겨 받은 json 데이터가 자바의 모델 인스턴스로 자동 변환된다
 	public List<ModelPerson> selectparam(Model model, @RequestParam String name) {
@@ -66,6 +78,10 @@ public class RestPersonController {
 	// <input type="text" name="email" />
 	// <input type="button" value="send" />
 	// </form>
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#selectmodel(com.spring61.rest.model.ModelPerson)
+	 */
+	@Override
 	@RequestMapping(value = "/selectmodel", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public List<ModelPerson> selectmodel(@ModelAttribute ModelPerson person) {
@@ -76,6 +92,10 @@ public class RestPersonController {
 
 	// /rest/selectjson :: ajax 를 이용하여 json 데이터를 클라이언트에서 서버로 전송.
 	// var model = { 'id': '???', 'pw':'???', 'name':'???', 'email':'???' }
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#selectjson(com.spring61.rest.model.ModelPerson)
+	 */
+	@Override
 	@RequestMapping(value = "/selectjson", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public List<ModelPerson> selectjson(@RequestBody ModelPerson person) {
@@ -84,15 +104,10 @@ public class RestPersonController {
 		return service.select(person);
 	}
 
-	/**
-	 * 클라이언트 ---전송(JSONObject)---> 서버 --- 반환(JSONArray)--->클라이언트
-	 *
-	 * 1. 안드로이드 ---> 스프링 : 안드로이드는 json 을 스프링으로 전송한다. 2. 스프링 ---> 안드로이드 : 스프링에서
-	 * 안드로이드로 값을 1 개 반환한다.
-	 *
-	 * var map = { 'searchvalue' : { 'id': '???', 'pw':'???', 'name':'???',
-	 * 'email':'???' } , 'orderby' : 'desc' };
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#selectmap(org.springframework.ui.Model, java.util.Map)
 	 */
+	@Override
 	@RequestMapping(value = "/selectmap", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public List<ModelPerson> selectmap(Model model, @RequestBody Map<String, Object> map) {
@@ -104,6 +119,10 @@ public class RestPersonController {
 		return service.makePersonData(100, 200);
 	}
 
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#selectpaging(org.springframework.ui.Model, int, int)
+	 */
+	@Override
 	@RequestMapping(value = "/selectpaging", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public List<ModelPerson> selectpaging(Model model, @RequestParam int start, @RequestParam int end) {
@@ -113,6 +132,10 @@ public class RestPersonController {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#insertparam(org.springframework.ui.Model, java.lang.String)
+	 */
+	@Override
 	@RequestMapping(value = "/insertparam", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public boolean insertparam(Model model, @RequestParam String name) {
@@ -124,6 +147,10 @@ public class RestPersonController {
 		return service.insert(person);
 	}
 
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#insertmodel(org.springframework.ui.Model, com.spring61.rest.model.ModelPerson)
+	 */
+	@Override
 	@RequestMapping(value = "/insertmodel", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public boolean insertmodel(Model model, @ModelAttribute ModelPerson person) {
@@ -132,6 +159,10 @@ public class RestPersonController {
 		return service.insert(person);
 	}
 
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#insertjsonobject(org.springframework.ui.Model, com.spring61.rest.model.ModelPerson)
+	 */
+	@Override
 	@RequestMapping(value = "/insertjsonobject", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public boolean insertjsonobject(Model model, @RequestBody ModelPerson person) {
@@ -140,6 +171,10 @@ public class RestPersonController {
 		return service.insert(person);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.spring61.rest.controller.IPerson#insertjsonarray(org.springframework.ui.Model, java.util.List)
+	 */
+	@Override
 	@RequestMapping(value = "/insertjsonarray", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public boolean insertjsonarray(Model model, @RequestBody List<ModelPerson> person) {

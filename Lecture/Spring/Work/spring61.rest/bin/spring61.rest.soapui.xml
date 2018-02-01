@@ -18,7 +18,7 @@
                     <con:status>200</con:status>
                     <con:params/>
                 </con:representation>
-                <con:request name="Request 1" id="b8abc352-aba1-4a23-bb6d-b080e934a2c8" mediaType="application/json">
+                <con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>405</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="b8abc352-aba1-4a23-bb6d-b080e934a2c8" mediaType="application/json" postQueryString="false">
                     <con:settings>
                         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                     </con:settings>
@@ -35,51 +35,7 @@
             </con:method>
         </con:resource>
     </con:interface>
-    <con:interface xsi:type="con:RestService" id="5324e1cd-05fe-431f-b93f-4007351cd1bb" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <con:settings/>
-        <con:definitionCache/>
-        <con:endpoints>
-            <con:endpoint>http://localhost:8080</con:endpoint>
-        </con:endpoints>
-        <con:resource name="selectuserlist" path="/rest/selectuserlist" id="48b03230-c035-4166-8377-8b27e54f8449">
-            <con:settings/>
-            <con:parameters/>
-            <con:method name="Selectuserlist" id="2029b6b6-4071-466c-8b5f-4c20c3df11b6" method="GET">
-                <con:settings/>
-                <con:parameters/>
-                <con:representation type="RESPONSE">
-                    <con:mediaType>application/json;charset=UTF-8</con:mediaType>
-                    <con:status>200</con:status>
-                    <con:params/>
-                    <con:element>Response</con:element>
-                </con:representation>
-                <con:representation type="REQUEST">
-                    <con:mediaType>application/json</con:mediaType>
-                    <con:params/>
-                </con:representation>
-                <con:representation type="FAULT">
-                    <con:mediaType>text/html;charset=utf-8</con:mediaType>
-                    <con:status>405</con:status>
-                    <con:params/>
-                    <con:element>html</con:element>
-                </con:representation>
-                <con:request name="Request 1" id="148695da-c931-4bb7-ab84-e9b4e67349fe" mediaType="application/json" postQueryString="false">
-                    <con:settings>
-                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-                    </con:settings>
-                    <con:endpoint>http://localhost:8080</con:endpoint>
-                    <con:request/>
-                    <con:originalUri>http://localhost/rest/selectuserlist</con:originalUri>
-                    <con:credentials>
-                        <con:authType>No Authorization</con:authType>
-                    </con:credentials>
-                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-                    <con:jmsPropertyConfig/>
-                    <con:parameters/>
-                </con:request>
-            </con:method>
-        </con:resource>
-    </con:interface>
+    
     <con:interface xsi:type="con:RestService" id="e7c45b84-33a0-4d08-a8ad-489e664431cc" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:settings/>
         <con:definitionCache/>
@@ -159,7 +115,10 @@
             </con:method>
         </con:resource>
     </con:interface>
-    <con:interface xsi:type="con:RestService" id="c9d2035f-2952-4b98-8c39-0d2537e6303c" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="insertmodel" path="/rest/insertmodel" id="3a0a12ee-2d5c-4a29-8a5f-b805cb44a78e"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value>test3id</con:value><con:style>QUERY</con:style><con:default>test3id</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>pw</con:name><con:value>test3pw</con:value><con:style>QUERY</con:style><con:default>test3pw</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>name</con:name><con:value>test3name</con:value><con:style>QUERY</con:style><con:default>test3name</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>email</con:name><con:value>test3email</con:value><con:style>QUERY</con:style><con:default>test3email</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Insertperson" id="6c666065-3d46-40f7-9f15-f698309c7c3f" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="6c187ca7-edaa-493d-bd40-dbabd0e7fca4" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/rest/insertperson</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>id</con:entry><con:entry>pw</con:entry><con:entry>name</con:entry><con:entry>email</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="3a099e69-4012-403c-b76c-50568250fe71" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="Insertbody" path="/rest/insertbody" id="2caf374c-8dd6-4476-85fa-221765a615d4"><con:settings/><con:parameters/><con:method name="Insertbody" id="6ea31240-29dc-4a1e-b597-208c5da679c6" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="650995c3-88df-400f-926d-82e564e37be3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="RecordRequestRepresentations">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{"id":"test3id","pw":"test3pw","name":"test3name","email":"test3email"}</con:request><con:originalUri>http://localhost/rest/insertbody</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:properties/>
+    <con:interface xsi:type="con:RestService" id="7c45d655-ffb9-47b8-a04a-5d497c465328" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="Loginperson" path="/rest/loginperson" id="7c128eb9-ecde-4c52-8604-80c3c4753afb"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value>id1</con:value><con:style>QUERY</con:style><con:default>id1</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>pw</con:name><con:value>pw1</con:value><con:style>QUERY</con:style><con:default>pw1</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Loginperson" id="56bfe715-0e51-4197-9b81-9cad6816c394" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="Request 1" id="c6856cc7-9f81-446d-99bd-7007bc7c316e" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/rest/loginperson</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="id" value="testid1"/>
+  <con:entry key="pw" value="testpw1"/>
+</con:parameters><con:parameterOrder><con:entry>id</con:entry><con:entry>pw</con:entry></con:parameterOrder></con:request><con:request name="Request 2" id="cda0c72d-89cf-43ba-a0a3-4acf9f50075c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/rest/loginperson</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/>
     <con:wssContainer/>
     <con:oAuth2ProfileContainer/>
 <con:sensitiveInformation/></con:soapui-project>

@@ -11,9 +11,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.example.bbs.AppConstants;
 import com.example.bbs.R;
-import com.example.bbs.fragment.FragmentArticleData;
-import com.example.bbs.fragment.FragmentArticleFree;
-import com.example.bbs.fragment.FragmentArticleQna;
+import com.example.bbs.fragment.FragmentArticle;
 
 public class ArticleActivity extends AppCompatActivity {
     private ViewPager mViewPager;
@@ -72,11 +70,8 @@ public class ArticleActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    return FragmentArticleFree.newInstance(AppConstants.TITLE_ARTICLE_FREE, "");
-                case 1:
-                    return FragmentArticleQna.newInstance( AppConstants.TITLE_ARTICLE_QNA,"");
-                case 2:
-                    return FragmentArticleData.newInstance( AppConstants.TITLE_ARTICLE_DATA,"");
+                    return FragmentArticle.newInstance(AppConstants.TITLE_ARTICLE_FREE, "");
+
                 default:
                     return null;
             }
