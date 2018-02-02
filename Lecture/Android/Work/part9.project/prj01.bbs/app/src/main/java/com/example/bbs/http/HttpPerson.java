@@ -68,8 +68,8 @@ public class HttpPerson implements IPerson {
         try {
             request = new HttpRequest( HTTP_URL_LOGINPERSON );
             request.configPostType( HttpRequest.MineType.VALUES );
-            request.addParameter("id", id);
-            request.addParameter("pw", pw);
+            request.addBody("id", id);
+            request.addBody("pw", pw);
 
             httpCode = request.post();
 
@@ -98,7 +98,7 @@ public class HttpPerson implements IPerson {
         try {
             request = new HttpRequest(HTTP_URL_SELECTPARAM);
             request.configPostType( HttpRequest.MineType.VALUES );
-            request.addParameter("name", name);
+            request.addBody("name", name);
 
             httpCode = request.post();
 
@@ -130,10 +130,10 @@ public class HttpPerson implements IPerson {
         try {
             request = new HttpRequest( HTTP_URL_SELECTMODEL );
             request.configPostType(HttpRequest.MineType.VALUES);
-            request.addParameter("id"   , person.getId()   );
-            request.addParameter("pw"   , person.getPw()   );
-            request.addParameter("email", person.getEmail());
-            request.addParameter("name" , person.getName() );
+            request.addBody("id"   , person.getId()   );
+            request.addBody("pw"   , person.getPw()   );
+            request.addBody("email", person.getEmail());
+            request.addBody("name" , person.getName() );
 
             httpCode = request.post();
 
@@ -239,34 +239,147 @@ public class HttpPerson implements IPerson {
     // Response : JSONArray
     @Override
     public List<ModelPerson> selectpaging(Integer start, Integer end) {
-        return null;
+        List<ModelPerson> result = null;
+        JSONArray response = null;
+
+        try {
+            request = new HttpRequest(HTTP_URL_SELECTPAGING);
+            request.configPostType(HttpRequest.MineType.VALUES);
+
+            request.addBody( "start", start + "");
+            request.addBody( "end"  , end   + "");
+
+            httpCode = request.post();
+
+            if(httpCode==HttpURLConnection.HTTP_OK){
+                response = request.getJSONArrayResponse();
+            }
+
+            // Gson을 이용하여 JSONArray 를 List<ModelPerson>  로 변환.
+            result = new Gson().fromJson(response.toString(), new TypeToken<List<ModelPerson>>() {}.getType());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return result;
     }
 
     // Request  : values
     // Response : values
     @Override
     public boolean insertparam(String name) {
-        return false;
+        boolean result = false;
+        String respanse = null;
+
+        try {
+            request = new HttpRequest(HTTP_URL_INSERTPARAM);
+            request.configPostType(HttpRequest.MineType.VALUES);
+            request.addBody("name", name);
+
+            httpCode = request.post();
+
+            if(httpCode==HttpURLConnection.HTTP_OK){
+                respanse = request.getStringResponse();
+            }
+
+            result = Boolean.valueOf(respanse);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return result;
     }
 
     // Request  : values( model )
     // Response : values
     @Override
     public boolean insertmodel(ModelPerson person) {
-        return false;
+        boolean result = false;
+        String respanse = null;
+
+        try {
+            request = new HttpRequest(HTTP_URL_INSERTMODEL);
+            request.configPostType(HttpRequest.MineType.JSONObject);
+            request.addBody("id"   , person.getId()   );
+            request.addBody("pw"   , person.getPw()   );
+            request.addBody("name" , person.getName() );
+            request.addBody("email", person.getEmail());
+
+            httpCode = request.post();
+
+            if(httpCode==HttpURLConnection.HTTP_OK){
+                respanse = request.getStringResponse();
+            }
+
+            result = Boolean.valueOf(respanse);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return result;
     }
 
     // Request  : JSONObject
     // Response : values
     @Override
     public boolean insertjsonobject(ModelPerson person) {
-        return false;
+        boolean result = false;
+        String respanse = null;
+
+        try {
+            request = new HttpRequest(HTTP_URL_INSERTJSONOBJECT);
+            request.configPostType(HttpRequest.MineType.JSONObject);
+
+            String jsonString = new Gson().toJson(person);
+
+            httpCode = request.post(jsonString);
+
+            if(httpCode==HttpURLConnection.HTTP_OK){
+                respanse = request.getStringResponse();
+            }
+
+            result = Boolean.valueOf(respanse);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        return result;
     }
 
     // Request  : JSONArray
     // Response : values
     @Override
     public boolean insertjsonarray(List<ModelPerson> persons) {
-        return false;
+        boolean result = false;
+        String respanse = null;
+
+        try {
+            request = new HttpRequest(HTTP_URL_INSERTJSONARRAY);
+            request.configPostType(HttpRequest.MineType.JSONArray);
+
+            String jsonString = new Gson().toJson(persons);
+
+            httpCode = request.post(jsonString);
+
+            if(httpCode==HttpURLConnection.HTTP_OK){
+                respanse = request.getStringResponse();
+            }
+
+            result = Boolean.valueOf(respanse);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
     }
 }

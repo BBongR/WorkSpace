@@ -110,7 +110,7 @@ public class HttpRequest {
         return this;
     }
 
-    public HttpRequest addParameter(String key, String value) {
+    public HttpRequest addBody(String key, String value) {
         this.params.put(key, value);
         return this;
     }

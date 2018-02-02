@@ -21,16 +21,16 @@ public class RestBoardController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(RestBoardController.class);
 	
-	// ServiceUser 인스턴스 만들기.
+	// ServiceUser �씤�뒪�꽩�뒪 留뚮뱾湲�.
 	@Autowired 
 	IServiceUser usersvr;
 
-    // ServiceBoard 인스턴스 만들기.
+    // ServiceBoard �씤�뒪�꽩�뒪 留뚮뱾湲�.
     @Autowired
     IServiceBoard boardsvr;
 
     @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST} )
-    @ResponseBody
+    @ResponseBody // json으로 변환해서 클라이언트로로 보내준다
     public ModelUser login(String userid, String passwd) {
         logger.info("/rest/login");        
         return usersvr.login( userid, passwd );
@@ -97,8 +97,8 @@ public class RestBoardController {
     } 
 
     /**
-     * 클라이언트 변수명: cd
-     * 서버       변수명: boardcd
+     * �겢�씪�씠�뼵�듃 蹂��닔紐�: cd
+     * �꽌踰�       蹂��닔紐�: boardcd
      */
     @RequestMapping(value = "/getboardone", method = {RequestMethod.GET, RequestMethod.POST} )
     @ResponseBody
