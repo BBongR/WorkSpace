@@ -137,5 +137,22 @@
         <beans:property name="maxUploadSize" value="100000000" />
         <beans:property name="maxInMemorySize" value="100000000" />
     </beans:bean>
+    
+    <!-- step7. @ReponseBody를 사용 할 때 한글 깨짐 해결 설정 -->
+    <annotation-driven>
+        <message-converters> 
+            <!-- @ResponseBody로 String 처리할때 한글처리 -->
+            <beans:bean
+                class="org.springframework.http.converter.StringHttpMessageConverter">
+                <beans:property name="supportedMediaTypes">
+                    <beans:list>
+                        <beans:value>text/html;        charset=utf8</beans:value>
+                        <beans:value>application/json; charset=utf8</beans:value>
+                        <beans:value>application/xml;  charset=utf8</beans:value>
+                    </beans:list>
+                </beans:property>
+            </beans:bean>
+        </message-converters>
+    </annotation-driven>
 
 </beans:beans>
